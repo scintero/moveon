@@ -1,0 +1,805 @@
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+
+    <!-- App details -->
+    <string name="app_name">MoveOn</string>
+    <string name="app_complete_name">MoveOn Sports Tracker</string>
+
+    <!-- Keys for persisted preferences. Don't translate this. -->
+    <string name="bluetooth_sensor_key">bluetoothSensor</string>
+    <string name="sensor_type_key">sensorType</string>
+
+    <!-- Sensor Types. Don't translate this. -->
+    <string name="none">NONE</string>
+    <string name="polar_sensor_type">POLAR</string>
+    <string name="zephyr_sensor_type">ZEPHYR</string>
+    <string name="ant_sensor_type">ANT</string>
+    <string name="btle_sensor_type">BLUETOOTH LE</string>
+
+    <!-- Sensor states -->
+    <string name="sensor_data_time">Sensor data time</string>
+    <string name="power_meter_enabled">Power meter enabled</string>
+    <string name="heart_rate_monitor_enabled">Heart rate monitor enabled</string>
+    <string name="no_sensor_manager">No sensor manager</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="sensor_state_connecting">Connecting</string>
+    <string name="sensor_state_connected">Connected</string>
+    <string name="sensor_state_disconnected">Disconnected</string>
+    <string name="sensor_state_sending">Sensor is sending</string>
+    <string name="no_sensor_service">No sensor service</string>
+    <string name="searching">Searching</string>
+    <string name="sending">Sending</string>
+    <string name="sensor_type">Type of sensor</string>
+    <string name="settings_sensor_ant_not_connected" translation_description="In the 'Sensor' settings, the summary to indicate that an ANT+ sensor
+      	is not connected.">Not connected</string>
+    <string name="settings_sensor_connected" translation_description="A message when a sensor is connected.
+		%1$s: sensor name. E.g., 'Polar Bluetooth'.">Connected to %1$s</string>
+    <string name="settings_sensor_ant_paired" translation_description="In the 'Sensor' settings, the summary to indicate that an ANT+ sensor
+      	is paired. Note that ANT+ is a radio standard.
+      	%1$d: device id number. E.g., '1'.">Paired to %1$d</string>
+
+    <!-- Sensor settings values -->
+    <string name="value_none" translation_description="In a setting picker, the value to pick none of the options.">None</string>
+    <string name="settings_sensor_type_polar" translation_description="In the 'Sensor' settings, the option in the 'Sensor type' picker to
+      	choose a Polar bluetooth sensor.">Polar Bluetooth</string>
+    <string name="settings_sensor_type_zephyr" translation_description="In the 'Sensor' settings, the option in the 'Sensor type' picker to
+      	choose a Zephyr bluetooth sensor.">Zephyr Bluetooth (experimental)</string>
+    <string name="settings_sensor_type_btle">Smart Bluetooth -LE- (experimental)</string>
+    <string name="settings_sensor_type_ant" translation_description="In the 'Sensor' settings, the option in the 'Sensor type' picker to
+      	choose an ANT+ sensor. Note that ANT+ is a radio standard.">ANT+</string>
+    <string name="settings_sensor_ant_reset_heart_rate_monitor" translation_description="In the 'Sensor' settings, under the 'ANT+' section, the option to reset
+      	an ANT+ heart rate monitor. Note that ANT+ is a radio standard.">Reset heart rate mointor</string>
+    <string name="settings_sensor_ant_reset_speed_distance_monitor" translation_description="In the 'Sensor' settings, under the 'ANT+' section, the option to reset
+      	an ANT+ stride based speed distance monitor, also known as foot pod. Note that ANT+ is a radio
+      	standard.">Reset speed distance monitor (experimental)</string>
+    <string name="settings_sensor_ant_reset_bike_cadence_sensor" translation_description="In the 'Sensor' settings, under the 'ANT+' section, the option to reset
+      	an ANT+ bike cadence sensor. Note that ANT+ is a radio standard.">Reset bike cadence sensor (experimental)</string>
+    <string name="settings_sensor_ant_reset_combined_bike_sensor" translation_description="In the 'Sensor' settings, under the 'ANT+' section, the option to reset
+      	an ANT+ combined bike cadence and speed sensor. Note that ANT+ is a radio standard.">Reset combined bike sensor (experimental)</string>
+
+    <!-- Images gallery -->
+    <string name="image_resource_missing">The resource you are trying to view does not exist or can not be accessed</string>
+
+    <!-- Notification bar -->
+    <string name="local_service_started">Application launched. Click here to bring it to the front.</string>
+
+    <!-- Tabs -->
+    <string name="tab_history">HISTORY</string>
+    <string name="tab_practice">MAIN</string>
+    <string name="tab_statistics">STATISTICS</string>
+    <string name="tab_summary1">SUMMARY</string>
+    <string name="tab_summary2">LAPS</string>
+    <string name="tab_summary3">GRAPHS</string>
+    <string name="tab_summary4">HR</string>
+
+    <!-- Activities -->
+    <string name="activity1">Walking</string>
+    <string name="activity2">Running</string>
+    <string name="activity3">Climbing stairs</string>
+    <string name="activity4">Sport cycling</string>
+    <string name="activity5">Mountain biking</string>
+    <string name="activity6">Indoor cycling</string>
+    <string name="activity7">Hiking</string>
+    <string name="activity8">Football (soccer)</string>
+    <string name="activity9">Basketball</string>
+    <string name="activity10">Handball</string>
+    <string name="activity11">Tennis</string>
+    <string name="activity12">Skateboarding</string>
+    <string name="activity13">Baseball</string>
+    <string name="activity14">Drive (car)</string>
+    <string name="activity15">Drive (motorbike)</string>
+    <string name="activity16">Drive (quad)</string>
+    <string name="activity17">Martial arts</string>
+    <string name="activity18">Boxing</string>
+    <string name="activity19">Squash</string>
+    <string name="activity20">Trekking</string>
+    <string name="activity21">Skating</string>
+    <string name="activity22">Ice skating</string>
+    <string name="activity23">Skiing</string>
+    <string name="activity24">Snowboarding</string>
+    <string name="activity25">Cross country ski</string>
+    <string name="activity26">Rowing</string>
+    <string name="activity27">Navigation</string>
+    <string name="activity28">Billiards</string>
+    <string name="activity29">Golfing</string>
+    <string name="activity30">Bowling</string>
+    <string name="activity31">Table tennis</string>
+    <string name="activity32">Horse riding</string>
+    <string name="activity33">Skipping</string>
+    <string name="activity34">Boules</string>
+    <string name="activity35">Volleyball</string>
+    <string name="activity36">Pilates</string>
+    <string name="activity37">Yoga</string>
+    <string name="activity38">Football (rugby)</string>
+    <string name="activity39">Hockey</string>
+    <string name="activity40">Swimming</string>
+    <string name="activity41">Surfing</string>
+    <string name="activity42">Windsurfing</string>
+    <string name="activity43">Scuba diving</string>
+    <string name="activity44">Climbing</string>
+    <string name="activity45">Dancing</string>
+    <string name="activity46">Hang gliding</string>
+    <string name="activity47">Archery</string>
+    <string name="activity48">Others</string>
+
+    <!-- GPS status -->
+    <string name="bad_signal">Bad signal</string>
+    <string name="weak_signal">Weak signal</string>
+    <string name="good_signal">Good signal</string>
+    <string name="excellent_signal">Excellent signal</string>
+
+    <!-- Bottom action bar -->
+    <string name="voice_coach">Enable or disable voice coach</string>
+    <string name="camera">Make photos in your practices</string>
+    <string name="padlock">Lock widgets</string>
+    <string name="music">Starts music player</string>
+    <string name="settings">Application settings</string>
+    <string name="add">Imports one or more new practices</string>
+    <string name="export">Exports one or more practices</string>
+    <string name="share">Share your practices in social networks</string>
+    <string name="create">Create a new manual practice</string>
+    <string name="filter">Filter practices for time periods and/or types of activities</string>
+
+    <!-- 'loading' form -->
+    <string name="loading" translation_description="The part '&#8230;' of the string is the ellipsis.">LOADING&#8230;</string>
+    <string name="wait_until_app_begins" translation_description="The part '&#8230;' of the string is the ellipsis.">Wait until application starts to properly exiting&#8230;</string>
+
+    <!-- 'main' form -->
+    <string name="display_type_one">Change the information type to show</string>
+    <string name="display_type_two">Select the practice target</string>
+    <string name="display_type_three">Change the activity of practice</string>
+    <string name="gps">Open the GPS activation form</string>
+    <string name="start">Start a new practice</string>
+    <string name="play_label">Pause or resume the practice</string>
+    <string name="play_1">Pause</string>
+    <string name="play_2">Resume</string>
+    <string name="stop">Stop</string>
+    <string name="stop_label">Stops practice</string>
+    <string name="mapview_full_screen">Displays the map in full screen</string>
+    <string name="mapview_follow_location">Enables follow location function</string>
+    <string name="activity">ACTIVITY</string>
+    <string name="start_activity">Start practice</string>
+
+    <!-- 'history' form -->
+    <string name="history_wellcome" translation_description="Simple quotation mark + backslash is a single quotation mark.">Start a new practice by pressing the \'Start practice\' button from the main screen.</string>
+    <string name="history_sessions">SESSIONS</string>
+    <string name="history_duration">TIME</string>
+    <string name="history_calories">CALORIES</string>
+
+    <!-- 'statistics' form -->
+    <string name="statistics_start">Create new workouts and see your practices statistics here.</string>
+    <string name="statistics_label1">TOTAL PRACTICES</string>
+    <string name="statistics_label2">TOTAL TIME</string>
+    <string name="statistics_label3">TOTAL DISTANCE</string>
+    <string name="statistics_label4">TOTAL ELEV. GAIN</string>
+    <string name="statistics_label5">TOTAL ELEV. LOSS</string>
+    <string name="statistics_label6">AVG SPEED</string>
+    <string name="statistics_label7">AVG. TIME</string>
+    <string name="statistics_label8">MOST USED SHOE</string>
+    <string name="statistics_label9">TOTAL CALORIES</string>
+    <string name="statistics_label10">TOTAL STEPS</string>
+    <string name="statistics_label11">AVG. HR</string>
+    <string name="statistics_label12">CONSUMED HAMB.</string>
+    <string name="statistics_label13">ROUNDS TO THE WORLD</string>
+    <string name="statistics_label14">TRIPS TO THE MOON</string>
+
+    <!-- 'summary1' form -->
+    <string name="shoe">Shoe</string>
+    <string name="comments">Notes</string>
+    <string name="accum_ascent">Elev. gain</string>
+    <string name="accum_descent">Elev. loss</string>
+    <string name="avg_cadence">Avg. cadence</string>
+    <string name="max_cadence">Max. cadence</string>
+    <string name="pauses">Pauses</string>
+    <string name="gallery_pictures">Pictures</string>
+
+    <!-- 'shoes' form -->
+    <string name="empty_shoes_list" translation_description="Simple quotation mark + backslash is a single quotation mark.
+        The '\n' is a carriage return.">The list of your shoes is empty.\nAdd a new one pressing the \'+\' button you see on the top of the screen.</string>
+
+    <!-- 'hiit' form -->
+    <string name="empty_interval_list" translation_description="Simple quotation mark + backslash is a single quotation mark.
+        The '\n' is a carriage return.">The list of your intervals is empty.\nAdd a new one pressing the \'+\' button you see on the top of the screen.</string>
+
+    <!-- 'hiit_pressets' form -->
+    <string name="hiit_name_hint" translation_description="The part '&#8230;' of the string is the ellipsis.">Add a descriptive name&#8230;</string>
+    <string name="hiit_pressets_warm_up">Warm-up:</string>
+    <string name="laps">Rounds:</string>
+    <string name="hiit_pressets_recovery">Cool down:</string>
+    <string name="hiit_pressets_intervals_label">Add new intervals:</string>
+    <string name="hiit_pressets_training_name">Name of training:</string>
+
+    <!-- 'summary2' form -->
+    <string name="split_laps_one_long_unit1">1 km</string>
+    <string name="split_laps_two_long_unit1">2 km</string>
+    <string name="split_laps_three_long_unit1">5 km</string>
+    <string name="split_laps_four_long_unit1">10 km</string>
+    <string name="split_laps_five_long_unit1">20 km</string>
+    <string name="split_laps_one_long_unit2">1 mi</string>
+    <string name="split_laps_two_long_unit2">2 mi</string>
+    <string name="split_laps_three_long_unit2">5 mi</string>
+    <string name="split_laps_four_long_unit2">10 mi</string>
+    <string name="split_laps_five_long_unit2">20 mi</string>
+    <string name="split_laps_label">Show information divided by chosen time period</string>
+
+    <!-- 'summary3 form -->
+    <string name="no_location_info">This practice does not contain data about altitude and speed.</string>
+    <string name="no_info_selected">You have not selected any criteria to draw the graph.</string>
+
+    <!-- 'summary4 form -->
+    <string name="no_hr_info">This practice does not contain information about heart rate or have not been filled heart rate data in user setting menu.</string>
+
+    <!-- 'add_or_edit_hiit_interval' form -->
+    <string name="type_hiit">Type:</string>
+    <string name="time_hiit">Time:</string>
+    <string name="min_hiit">MIN</string>
+    <string name="sec_hiit">SEC</string>
+
+    <!-- 'hiit form -->
+    <string name="hiit_interval_label">My intervals</string>
+
+    <!-- 'history_custom_filter form -->
+    <string name="activity_filter">Activity:</string>
+    <string name="date_filter">Date:</string>
+
+    <!-- 'add_practice and edit_practice form -->
+    <string name="add_edit_date_and_hour_label">Date and time:</string>
+    <string name="add_edit_time_label">Duration:</string>
+    <string name="add_edit_distance_label">Distance:</string>
+    <string name="add_edit_avg_speed_label">Average speed:</string>
+    <string name="add_edit_max_speed_label">Maximum speed:</string>
+    <string name="add_edit_max_altitude_label">Maximum altitude:</string>
+    <string name="add_edit_min_altitude_label">Minimum altitude:</string>
+    <string name="add_edit_up_accum_altitude_label">Elevation gain:</string>
+    <string name="add_edit_down_accum_altitude_label">Elevation loss:</string>
+    <string name="add_edit_kcal_label">Calories:</string>
+    <string name="add_edit_steps_label">Steps:</string>
+    <string name="add_edit_avg_fc_label">Average HR:</string>
+    <string name="add_edit_max_fc_label">Maximum HR:</string>
+    <string name="add_edit_avg_cadence_label">Average cadence:</string>
+    <string name="add_edit_max_cadence_label">Maximum cadence:</string>
+
+    <!-- 'karvonen form -->
+    <string name="birthday">Date of birth:</string>
+    <string name="resting_hr">Resting HR (bpm):</string>
+    <string name="calculate">Calculate</string>
+    <string name="max_hr">Estimated max. HR:</string>
+    <string name="hr_zone1" translation_description="The part '&#8211;' of the string is a dash symbol.">50&#8211;60 %</string>
+    <string name="hr_zone2" translation_description="The part '&#8211;' of the string is a dash symbol.">60&#8211;70 %</string>
+    <string name="hr_zone3" translation_description="The part '&#8211;' of the string is a dash symbol.">70&#8211;80 %</string>
+    <string name="hr_zone4" translation_description="The part '&#8211;' of the string is a dash symbol.">80&#8211;90 %</string>
+    <string name="hr_zone5" translation_description="The part '&#8211;' of the string is a dash symbol.">90&#8211;100 %</string>
+
+    <!-- 'import_task_previous_details' form -->
+    <string name="import_task_date_time">Date,hour:</string>
+    <string name="import_task_delete_file">Delete file(s) at the end</string>
+
+    <!-- 'practice_details' form -->
+    <string name="discard">Discard</string>
+    <string name="finish">Finalize</string>
+
+    <!-- 'shoe_custom_dialog' form -->
+    <string name="brand_and_model">Brand and model:</string>
+    <string name="start_distance">Initial distance:</string>
+    <string name="default_shoe">Mark as default</string>
+
+    <!-- 'sharing content' form -->
+    <string name="name_label">Practice name:</string>
+    <string name="shoe_label">Shoe:</string>
+    <string name="comments_label">Notes:</string>
+    <string name="comments_hint_label" translation_description="The part '&#8230;' of the string is the ellipsis.">Add your notes here&#8230;</string>
+    <string name="hours_label">h.</string>
+    <string name="minutes_label">m.</string>
+    <string name="seconds_label">s.</string>
+    <string name="time_uppercase">TIME</string>
+    <string name="ritm_uppercase">RITM/LAP</string>
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Information details -->
+    <string name="time_label">Duration</string>
+    <string name="distance_label">Distance</string>
+    <string name="avg_label">Avg. speed</string>
+    <string name="avg_label_complete">Average speed</string>
+    <string name="calories_label">Calories</string>
+    <string name="single_calories_label">Calorie</string>
+    <string name="speed_label">Speed</string>
+    <string name="max_speed_label">Max. speed</string>
+    <string name="max_speed_label_complete">Maximum speed</string>
+    <string name="ritm_label">Avg. ritm</string>
+    <string name="ritm_label_complete">Average ritm</string>
+    <string name="altitude_label">Altitude</string>
+    <string name="up_accum_altitude_label_complete">Elevation gain</string>
+    <string name="down_accum_altitude_label_complete">Elevation loss</string>
+    <string name="max_altitude_label">Max. altitude</string>
+    <string name="max_altitude_label_complete">Maximum altitude</string>
+    <string name="min_altitude_label">Min. altitude</string>
+    <string name="min_altitude_label_complete">Minimum altitude</string>
+    <string name="steps_label">Steps</string>
+    <string name="beats_label">Heart rate</string>
+    <string name="beats_avg_label">Average HR</string>
+    <string name="max_beats_label">Maximum HR</string>
+    <string name="heart_rate_label_complete">Beats per minute</string>
+    <string name="cadence_label">Cadence (experimental)</string>
+    <string name="avg_cadence_label">Average cadence</string>
+    <string name="max_cadence_label">Maximum cadence</string>
+    <string name="cadence_label_complete">Revolutions per minute</string>
+
+    <!-- Information details values -->
+    <string name="time_value">00:00:00</string>
+    <string name="ritm_value">00:00</string>
+    <string name="zero_value">0</string>
+    <string name="two_zeros_value">00</string>
+    <string name="zero_with_one_decimal_place_value">0.0</string>
+    <string name="zero_with_two_decimal_places_value">0.00</string>
+    <string name="zero_with_three_decimal_places_value">0.000</string>
+    <string name="one_value">1</string>
+
+    <!-- Metric units -->
+    <string name="long_unit1">Metric</string>
+    <string name="kilograms">kilogramos</string>
+    <string name="long_unit2">Imperial</string>
+    <string name="pounds">pounds</string>
+    <string name="long_unit1_detail_1">km</string>
+    <string name="long_unit1_detail_2">km/h</string>
+    <string name="long_unit1_detail_3">min/km</string>
+    <string name="long_unit1_detail_4">m</string>
+    <string name="long_unit1_detail_5">kilometer</string>
+    <string name="long_unit1_detail_6">meter</string>
+    <string name="long_unit1_detail_7">Kilometers per hour</string>
+    <string name="long_unit1_detail_8">by kilometer</string>
+    <string name="long_unit1_detail_9">Kilometres</string>
+    <string name="long_unit1_detail_10">meters</string>
+
+    <!-- Imperial units -->
+    <string name="long_unit2_detail_1">mi</string>
+    <string name="long_unit2_detail_2">mph</string>
+    <string name="long_unit2_detail_3">min/mi</string>
+    <string name="long_unit2_detail_4">yd</string>
+    <string name="long_unit2_detail_5">Mile</string>
+    <string name="long_unit2_detail_6">yard</string>
+    <string name="long_unit2_detail_7">Miles per hour</string>
+    <string name="long_unit2_detail_8">by mile</string>
+    <string name="long_unit2_detail_9">miles</string>
+    <string name="long_unit2_detail_10">yards</string>
+
+    <!-- Time units -->
+    <string name="hours_first_letter">h</string>
+    <string name="minutes_first_letter">m</string>
+    <string name="seconds_first_letter">s</string>
+
+    <!-- GPS States -->
+    <string name="gps_off">No GPS signal</string>
+    <string name="gps_searching" translation_description="The part '&#8230;' of the string is the ellipsis.">Searching new GPS locations&#8230;</string>
+    <string name="gps_on">¡GPS ready!</string>
+
+    <!-- Time or Distance Notification Intervals / Add Or Edit Hiit Interval Activities strings -->
+    <string name="interval_error_saving_value">For save interval, you must enter a value before</string>
+    <string name="interval_error_in_number">The interval value is not a valid number</string>
+    <string name="minutes_interval_error_in_number">The value of range for minutes is not a valid number or is greater than 59</string>
+    <string name="seconds_interval_error_in_number">The value of range for seconds is not a valid number or is greater than 59</string>
+
+    <!-- Settings -->
+    <string name="menu_settings">Settings</string>
+    <string name="general_settings_title">Basic preferences</string>
+    <string name="general_settings_details">Metric units, countdown, auto-lock and auto-pause</string>
+    <string name="units_setting">Unit of measure</string>
+    <string name="units_setting_details">Metric or imperial unit</string>
+    <string name="units_setting_title">Select type</string>
+    <string name="units_metric">Kilometers, metric</string>
+    <string name="units_imperial">Miles, imperial</string>
+    <string name="user_setting">User settings</string>
+    <string name="user_setting_details">Configure the settings of your profile for a more accurate calculation of calories or manage your shoes here</string>
+    <string name="karvonen_setting">Heart rate ranges</string>
+    <string name="karvonen_setting_title">Configure your HR data</string>
+    <string name="karvonen_setting_details">Configure the data of your heart rate or automatically calculate them here</string>
+    <string name="shoes_setting">Manage your shoes</string>
+    <string name="shoes_setting_title">My shoes</string>
+    <string name="shoes_setting_details">Create new shoes, delete unused or check the use of each one</string>
+    <string name="add_shoe">Add a new shoe to list</string>
+    <string name="add_hiit">Add a new interval training to list</string>
+    <string name="add_hiit_interval">Add a new interval</string>
+    <string name="body_weight_setting">Body weight</string>
+    <string name="necessary_to_calculate_calories">Necessary to calculate calories</string>
+    <string name="body_weight_setting_title">Enter your body weight</string>
+    <string name="gender_setting">Gender</string>
+    <string name="gender_setting_title">Select your gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="auto_pause_setting_title">Auto pause</string>
+    <string name="auto_pause_setting_details">Configure when to activate the auto-pause (not applicable to interval training)</string>
+    <string name="auto_pause_value1">Less than 2 km/h</string>
+    <string name="auto_pause_value2">Less than 5 km/h</string>
+    <string name="sensitivity_title">Sensitivity</string>
+    <string name="sensitivity_details">Calibrate the motion sensor (pedometer)</string>
+    <string name="sensitivity_settings_title">Select sensitivity level</string>
+    <string name="sensitivity_level1">Higher</string>
+    <string name="sensitivity_level2">Extra high</string>
+    <string name="sensitivity_level3">Very high</string>
+    <string name="sensitivity_level4">High</string>
+    <string name="sensitivity_level5">Intermediate</string>
+    <string name="sensitivity_level6">Low</string>
+    <string name="sensitivity_level7">Very low</string>
+    <string name="sensitivity_level8">Extra low</string>
+    <string name="sensitivity_level9">Lower</string>
+    <string name="map_tile_title">Map</string>
+    <string name="map_tile_details">Select the type of map to show</string>
+    <string name="map_tile_settings_title">Map types</string>
+    <string name="map_tile_type1">Mapnik</string>
+    <string name="map_tile_type2">CycleMap</string>
+    <string name="map_tile_type3">OSMPublicTransport</string>
+    <string name="map_tile_type4">MapquestOSM</string>
+    <string name="map_tile_type5">MapquestAerial</string>
+    <string name="screen_settings_title">Screen adjustment</string>
+    <string name="operation_level_setting">Select level</string>
+    <string name="operation_level_setting_details">Some devices prevent the use of motion sensors when the screen is off. Choose the level that best suits to your terminal.</string>
+    <string name="run_in_background">Normal (runs in background)</string>
+    <string name="keep_screen_on">High (keeps the screen dark)</string>
+    <string name="wake_up">Aggressive (awake when the screen is off)</string>
+    <string name="voice_settings_title">Audio preferences</string>
+    <string name="voice_settings_details">Sets the virtual coach, sounds and alerts</string>
+    <string name="voice_title">Voice</string>
+    <string name="voice_setting">Voice information</string>
+    <string name="voice_setting_details">Enable/disable sound notifications</string>
+    <string name="voice_summary">General settings of the virtual voice coach</string>
+    <string name="speaking_time_interval_setting">Select time interval</string>
+    <string name="speaking_time_interval_setting_title">Select interval (minutes)</string>
+    <string name="speaking_time_interval_setting_details">Time interval between sound notifications</string>
+    <string name="speaking_distance_interval_setting">Select distance interval</string>
+    <string name="speaking_distance_interval_setting_title">Select interval (km. or mi.)</string>
+    <string name="speaking_distance_interval_setting_details">Distance interval between sound notifications</string>
+    <string name="tell_what">Select information</string>
+    <string name="tell_what_setting_details">Customize the information to notify</string>
+    <string name="tell_units_details">Kilometers or miles</string>
+    <string name="tell_speed_units_setting_details">km/h or mph</string>
+    <string name="tell_calories_setting">Calories burned</string>
+    <string name="tell_calories_setting_details">kcal</string>
+    <string name="tell_altitude_setting_details">meters or yards</string>
+    <string name="tell_heart_rate_setting">Heartbeat</string>
+    <string name="tell_cadence_setting">Cadence</string>
+    <string name="audio_settings_title">Alerts and sounds (HIIT)</string>
+    <string name="countdown_title">Countdown time</string>
+    <string name="countdown_summary">Set the countdown time before practice begins</string>
+    <string name="lock_title">Auto lock</string>
+    <string name="lock_summary">The application locked when practice begins</string>
+    <string name="hiit_summary">Alerts and sounds settings for HIIT</string>
+    <string name="hiit_countdown_summary">Sets the time for alert and/or voice alerts</string>
+    <string name="hiit_countdown_tts_title">Voice countdown</string>
+    <string name="hiit_current_interval_title">Voice current interval</string>
+    <string name="hiit_current_interval_summary">Announces the current interval as start (it will be ignored if time is not greater to countdown value + 6 sec. for next interval notification)</string>
+    <string name="hiit_next_interval_title">Voice next interval</string>
+    <string name="hiit_next_interval_summary">Announces the next interval as start (it will be ignored if time is not greater to countdown value + 6 sec. for current interval notification (if enabled) + 6 sec. for next interval notification)</string>
+    <string name="hiit_sound_title">Sound notification</string>
+    <string name="hiit_sound_summary">Use sound alerts</string>
+    <string name="hiit_vibrate_title">Vibration notification</string>
+    <string name="hiit_vibrate_summary">Vibrate during alerts</string>
+    <string name="accessories_type_title">Accessories</string>
+    <string name="accessories_type_summary">Bluetooth or ANT+ sensors</string>
+    <string name="bt_title">Bluetooth pairing</string>
+    <string name="bt_summary">Opens the Bluetooth settings to synchronize a sensor</string>
+    <string name="bt_sensor">Bluetooth sensor</string>
+    <string name="osm_setup_title">Connect and publishing</string>
+    <string name="osm_setup_summary">Sets the authorization, tags, description and visibility to uoload the GPS routes</string>
+    <string name="osm_lbl_authorize">Allow this app</string>
+    <string name="osm_lbl_authorize_description">You must grant permissions to this app to upload the GPS traces to OpenStreetMap. Then you can define tags, descriptions and visibility from this form.</string>
+    <string name="osm_visibility">Visibility</string>
+    <string name="osm_visibility_summary">Sets the visibility of your uploaded GPS traces</string>
+    <string name="osm_description">Description</string>
+    <string name="osm_description_summary">The description used for uploaded traces</string>
+    <string name="osm_tags">Tags</string>
+    <string name="osm_tags_summary">Labels applied for uploaded traces</string>
+    <string name="osm_resetauth">Delete authorization</string>
+    <string name="osm_resetauth_summary">Delete local authorization to comunicate with your OSM account</string>
+    <string name="osm_auth_error">An error has occurred while attempting to contact with OpenStreetMap servers. Make sure you have active Internet connection or try it again later.</string>
+    <string name="about_title" translation_description="The part '&#8230;' of the string is the ellipsis.">About&#8230;</string>
+    <string name="about_details">About MoveOn Sports Tracker</string>
+
+    <!-- Audio trainer -->
+    <string name="tts_start_practice">¡Go!</string>
+    <string name="tts_pause_practice">¡Practice paused!</string>
+    <string name="tts_resume_practice">¡Practice resumed!</string>
+    <string name="tts_stop_practice">¡Practice stopped!</string>
+    <string name="tts_media_button_register_error">An error has occurred while registering the multimedia audio button</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_title">Information to show:</string>
+    <string name="dialog_export_exporting" translation_description="The part '&#8230;' of the string is the ellipsis.">Exporting&#8230;</string>
+    <string name="dialog_export_preparing">Preparing for export</string>
+    <string name="dialog_export_creating_files">Creating files</string>
+    <string name="dialog_export_packaging">Packaging</string>
+    <string name="dialog_export_packaging_images">Packaging images</string>
+    <string name="dialog_export_finish">Process completed</string>
+    <string name="dialog_export_creating_kml">Creating KML</string>
+    <string name="dialog_export_creating_kmz">Creating KMZ</string>
+    <string name="dialog_export_creating_gpx">Creating GPX</string>
+    <string name="dialog_export_creating_xml">Creating XML</string>
+    <string name="dialog_import_importing" translation_description="The part '&#8230;' of the string is the ellipsis.">Importing&#8230;</string>
+    <string name="dialog_import_text" translation_description="The part '&#8230;' of the string is the ellipsis.">Importing practice(s). This process may take a while&#8230;</string>
+    <string name="import_correctly">Practice(s) imported correctly</string>
+    <string name="import_error">An error in the import process has occurred, check the origin file</string>
+    <string name="alertdialog_option_1">Open</string>
+    <string name="alertdialog_option_2">Edit</string>
+    <string name="alertdialog_option_3">Export</string>
+    <string name="alertdialog_option_4">Delete</string>
+    <string name="alertdialog_option_5">Clone</string>
+    <string name="alertdialog_option_6">Use</string>
+    <string name="alertdialog_option_7">Share</string>
+    <string name="file_format_1">GPX format (time and speed)</string>
+    <string name="file_format_2">KML format</string>
+    <string name="file_format_3">KMZ format (KML with photos)</string>
+    <string name="shoes_listview_options_1">Set as default</string>
+    <string name="shoes_listview_options_2">Edit information</string>
+    <string name="shoes_listview_options_3">Delete from list</string>
+    <string name="choice_time1">All date range</string>
+    <string name="choice_time2">This year</string>
+    <string name="choice_time3">This month</string>
+    <string name="choice_time4">This week</string>
+    <string name="choice_time5">Delimited between dates</string>
+
+    <!-- Activity list header -->
+    <string name="activitylist_header_one">More frequently activities</string>
+    <string name="activitylist_header_two">All activities</string>
+
+    <!-- Practice recording descriptions -->
+    <string name="practice_started">New practice started</string>
+    <string name="saving_practice" translation_description="The part '&#8230;' of the string is the ellipsis.
+        The '\n' is a carriage return.">Saving practice.\n\nThis may take a while, wait&#8230;</string>
+
+    <!-- OSM -->
+    <string name="osm_requesttoken_url">http://www.openstreetmap.org/oauth/request_token</string>
+    <string name="osm_accesstoken_url">http://www.openstreetmap.org/oauth/access_token</string>
+    <string name="osm_authorize_url">http://www.openstreetmap.org/oauth/authorize</string>
+    <string name="osm_gpstrace_url">http://www.openstreetmap.org/api/0.6/gpx/create</string>
+    <string name="osm_private">Private (only shared as anonymous, unordered points)</string>
+    <string name="osm_public">Public (shown in trace list and as anonymous, unordered points)</string>
+    <string name="osm_trackable">Traceable (only shared as anonymous, ordered points with timestamps)</string>
+    <string name="osm_identifiable">Identifiable -recommended- (shown in trace list and as identifiable, ordered points with timestamps)</string>
+    <string name="osm_selected_file_to_upload">Selected file to send:</string>
+    <string name="osm_publishing">Publishing on OpenStreetMap</string>
+    <string name="osm_please_wait" translation_description="The part '&#8230;' of the string is the ellipsis.">Uploading GPS trace(s). Wait&#8230;</string>
+    <string name="osm_sorry" translation_description="The part '&#8230;' of the string is the ellipsis.">Sorry, file(s) not found&#8230;</string>
+    <string name="osm_error_uploading">There was an error uploading</string>
+    <string name="osm_gps_trace">of GPS trace(s) to OpenStreetMap</string>
+    <string name="osm_complete">¡Completed!</string>
+    <string name="osm_failure">¡Failure!</string>
+    <string name="sending_files_to_osm">Sending file(s) to OSM</string>
+    <string name="osm_authorization">Authorization for OpenStreetMap</string>
+    <string name="osm_gps_traces_authorization">First grant permissions to MoveOn for upload GPS traces to OpenStreetMap, and then try it again</string>
+    <string name="osm_authorization_form">Go to the authorization form</string>
+
+    <!-- Facebook -->
+    <string name="fb_logged_in" translation_description="The part '&#8230;' of the string is the ellipsis.">Connected&#8230;</string>
+    <string name="fb_logged_out" translation_description="The part '&#8230;' of the string is the ellipsis.">Disconnected&#8230;</string>
+    <string name="fb_error">Error:</string>
+    <string name="fb_success">¡Success!</string>
+    <string name="fb_not_installed">¡Facebook application not installed!</string>
+
+    <!-- Interval training names -->
+    <string name="standard_interval_training">Standard</string>
+    <string name="tabata_interval_training">Tabata</string>
+    <string name="pyramid_interval_training">Pyramid</string>
+
+    <!-- Data Base -->
+    <string name="db_open">Create or open the database</string>
+    <string name="db_close">Database closed</string>
+    <string name="db_deleting_register">Deleting the record with _id</string>
+    <string name="db_create_tables" translation_description="The part '&#8230;' of the string is the ellipsis.">Creating the tables in Database&#8230;</string>
+    <string name="db_updating_from_version">Updating Database from version</string>
+    <string name="db_updating_to_version">to version</string>
+    <string name="db_transaction_rolled_back">Failed to save information (rollback transaction)</string>
+    <string name="db_query_top_three_activities" translation_description="The part '&#8230;' of the string is the ellipsis.">Selecting the three more used activities&#8230;</string>
+    <string name="db_query_getting_shoes" translation_description="Simple quotation mark + backslash is a single quotation mark.">Getting shoes from table \'shoes\'</string>
+    <string name="db_query_select_hiit_intervals" translation_description="Simple quotation mark + backslash is a single quotation mark.">Selecting interval training from table \'hiit\'</string>
+    <string name="db_query_select_records_by_activity" translation_description="The part '&#8230;' of the string is the ellipsis.">Selecting rows by activity&#8230;</string>
+    <string name="db_query_select_records_by_date" translation_description="The part '&#8230;' of the string is the ellipsis.">Selecting rows by date&#8230;</string>
+    <string name="db_query_select_records_by_activity_and_date" translation_description="The part '&#8230;' of the string is the ellipsis.">Selecting rows by activity and date&#8230;</string>
+    <string name="checking_routes" translation_description="The part '&#8230;' of the string is the ellipsis.">Checking if there be routes&#8230;</string>
+    <string name="selecting_all_routes">Selecting all routes</string>
+    <string name="selecting_this_year_routes">Selecting all routes of this year</string>
+    <string name="selecting_this_month_routes">Selecting all routes of this month</string>
+    <string name="selecting_this_weak_routes">Selecting all routes of this week</string>
+    <string name="filter_by_activity">filtered by activity</string>
+    <string name="group_by_activities" translation_description="The part '&#8230;' of the string is the ellipsis.">grouped by activity&#8230;</string>
+    <string name="routes_with_hr" translation_description="The part '&#8230;' of the string is the ellipsis.">Selecting all routes made with heart rate monitor&#8230;</string>
+    <string name="selecting_most_used_shoes" translation_description="The part '&#8230;' of the string is the ellipsis.">Selecting most used shoes&#8230;</string>
+    <string name="selecting_most_used_shoes_in_data_range" translation_description="The part '&#8230;' of the string is the ellipsis.">Selecting the most used shoes in defined range of dates&#8230;</string>
+    <string name="shoe_name" translation_description="The part '&#8230;' of the string is the ellipsis.">Selecting the name of the shoe&#8230;</string>
+    <string name="summary2_hiit_query_part1">Selecting the locations of the interval between</string>
+    <string name="summary2_hiit_query_part2">second(s) and</string>
+    <string name="summary2_hiit_query_part3" translation_description="The part '&#8230;' of the string is the ellipsis.">second(s)&#8230;</string>
+    <string name="getting_time_and_distance_from_row_of_table_routes" translation_description="Simple quotation mark + backslash is a single quotation mark.">Getting time and distance from table \'routes\' and row with _id</string>
+    <string name="routes_counter_query" translation_description="Simple quotation mark + backslash is a single quotation mark.">Counting rows from table \'routes\'</string>
+    <string name="getting_shoe_with_id">Getting shoe with _id</string>
+    <string name="from_shoes_table" translation_description="Simple quotation mark + backslash is a single quotation mark.">from table \'shoes\'</string>
+    <string name="getting_route_with_id">Getting route with _id</string>
+
+    <!-- App strings -->
+    <string name="dash">-</string>
+    <string name="plus">+</string>
+    <string name="send_to">Share</string>
+    <string name="share_with">through:</string>
+    <string name="in" translation_description="Leave empty if there is no preposition 'in' in this language">in</string>
+    <string name="and" translation_description="Leave empty if there is no conjunction 'and' in this language">and</string>
+    <string name="basic_practice">Basic practice</string>
+    <string name="basic_practice_details">Registers a common practice</string>
+    <string name="objetive">Set a target</string>
+    <string name="objetive_details">Objetivo de distancia, tiempo o calorías</string>
+    <string name="win_yourself">Race with another practice</string>
+    <string name="win_yourself_details">Select a practice and beat them</string>
+    <string name="hiit">Interval trainings</string>
+    <string name="hiit_details">Use one of the preset or make your own</string>
+    <string name="confirm_action">Confirm action:</string>
+    <string name="select_action">Choose action:</string>
+    <string name="select_format">Choose format:</string>
+    <string name="discard_and_exit">Do you want to exit from the application discarding the current practice?</string>
+    <string name="exit" translation_description="Simple quotation mark + backslash is a single quotation mark.">Press \'Back\' again to exit</string>
+    <string name="hiit_type_description1">Recovery</string>
+    <string name="hiit_type_description2">Low intensity</string>
+    <string name="hiit_type_description3">Medium intensity</string>
+    <string name="hiit_type_description4">High intensity</string>
+    <string name="hiit_create_interval_error">Unable to create a interval of 0 minutes and 0 seconds</string>
+    <string name="required_name">A practice name is required</string>
+    <string name="number_of_rounds_error">You have not entered a number of rounds or the specified value is not a valid number</string>
+    <string name="hiit_preparation_minutes_error">You have not entered the warm-up minutes or the specified value is not a valid number</string>
+    <string name="hiit_preparation_seconds_error">You have not entered the warm-up seconds or the specified value is not a valid number</string>
+    <string name="hiit_cooldown_minutes_error">You have not entered the cool-down minutes or the specified value is not a valid number</string>
+    <string name="hiit_cooldown_seconds_error">You have not entered the cool-down seconds or the specified value is not a valid number</string>
+    <string name="hiit_missing_intervals">You have not added any interval</string>
+    <string name="none_text">None</string>
+    <string name="minutes_value_error">There is an error in the minutes text box. Are less than zero or greater than fifty-nine.</string>
+    <string name="seconds_value_error">There is an error in the seconds text box. Are less than zero or greater than fifty-nine.</string>
+    <string name="data">The data</string>
+    <string name="incorrect_format">has an incorrect format</string>
+    <string name="hours">hours</string>
+    <string name="minute">minute</string>
+    <string name="minutes">minutes</string>
+    <string name="second">second</string>
+    <string name="seconds">seconds</string>
+    <string name="interrupt">Interrupt</string>
+    <string name="restart">Restart</string>
+    <string name="exporting_data">Exporting application data</string>
+    <string name="export_canceled">Export action canceled</string>
+    <string name="importing_data">Importing Database backup to the application</string>
+    <string name="import_canceled">Import action canceled</string>
+    <string name="practice_save_in" translation_description="Simple quotation mark + backslash is a single quotation mark.">Practice(s) saved in \'</string>
+    <string name="actual_interval_of">Current interval of</string>
+    <string name="next_interval_of">Next interval of</string>
+    <string name="warm_up">warm-up</string>
+    <string name="cool_down">cool-down</string>
+    <string name="until">during</string>
+    <string name="cooldown_interval">Next interval of cool-down during</string>
+    <string name="end_of_interval">End of interval</string>
+    <string name="round_or_rounds">round(s)</string>
+    <string name="intervals">intervals</string>
+    <string name="warm_up_description">warm-up</string>
+    <string name="at_least_one_year" translation_description="The part '&#8230;' of the string is the ellipsis.">It has not even been a year since the date of birth. Unable to perform the calculation&#8230;</string>
+    <string name="hr_required" translation_description="The part '&#8230;' of the string is the ellipsis.">Is required resting HR&#8230;</string>
+    <string name="in_zone1" translation_description="The part '&#8230;' of the string is the ellipsis.">in the zone 1&#8230;</string>
+    <string name="in_zone2" translation_description="The part '&#8230;' of the string is the ellipsis.">in the zone 2&#8230;</string>
+    <string name="in_zone3" translation_description="The part '&#8230;' of the string is the ellipsis.">in the zone 3&#8230;</string>
+    <string name="in_zone4" translation_description="The part '&#8230;' of the string is the ellipsis.">in the zone 4&#8230;</string>
+    <string name="in_zone5" translation_description="The part '&#8230;' of the string is the ellipsis.">in the zone 5&#8230;</string>
+    <string name="resting_hr_missing" translation_description="The part '&#8230;' of the string is the ellipsis.">Resting HR fails&#8230;</string>
+    <string name="min_hr_missing">Minimum HR fails</string>
+    <string name="max_hr_missing">Maximum HR fails</string>
+    <string name="backup_completed_successfully">Backup done</string>
+    <string name="backup_error" translation_description="The part '&#8230;' of the string is the ellipsis.">There was an error and the process has completed incorrectly&#8230;</string>
+    <string name="backup_in">Backup data in</string>
+    <string name="btle_not_supported">This device does not support BT LE technology or Android version is less than Jelly Bean (version 4.3)</string>
+    <string name="ant_plus_not_supported">This device does not support ANT+</string>
+    <string name="backup_title">Backup</string>
+    <string name="backup_msg">Do you want to start the backup process?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="backup_canceled">Backup canceled</string>
+    <string name="wait_until_data_is_exported" translation_description="The part '&#8230;' of the string is the ellipsis.">Wait until data is exported&#8230;</string>
+    <string name="user_has_returned">User denied</string>
+    <string name="practice_name_missing">You must specify the name of practice before executing the save process</string>
+    <string name="practice_cancel_saving_process">Do you want to cancel practice saving action?</string>
+    <string name="start_date">Start Date:</string>
+    <string name="end_date">End date:</string>
+    <string name="end_date_greater_than_start_date" translation_description="The part '&#8230;' of the string is the ellipsis.">The end date must be greater than the start date&#8230;</string>
+    <string name="route_start">Practice started</string>
+    <string name="route_pause">Pause practice route</string>
+    <string name="route_continue">Resume practice route</string>
+    <string name="route_stop">Practice complete</string>
+    <string name="continued">Practice resumed</string>
+    <string name="pause">Practice paused</string>
+    <string name="end">End</string>
+    <string name="rides">rides in</string>
+    <string name="original_route_image">The original route has an image at this point</string>
+    <string name="route_in_progress" translation_description="The part '&#8230;' of the string is the ellipsis.">Ends the current practice to access to the information of this training&#8230;</string>
+    <string name="end_route_before">Stop running training first</string>
+    <string name="practices">practice(s)</string>
+    <string name="beats_per_minute">bpm</string>
+    <string name="revolutions_per_minute">rpm</string>
+    <string name="pictures">photo(s)</string>
+    <string name="no_internet" translation_description="The part '&#8230;' of the string is the ellipsis.">No active internet connection&#8230;</string>
+    <string name="backup_restored_successfully">Backup restored successfully</string>
+    <string name="backup_restored_unsuccessfully">A problem has occurred in the restoration process :-(</string>
+    <string name="objetive_type">Objetive type</string>
+    <string name="round_short_text">rou.</string>
+    <string name="interval_short_text">int.</string>
+    <string name="practice_completed">¡completed training!</string>
+    <string name="graph_time_and_speed_no_data">No time and speed data in this practice</string>
+    <string name="graph_time_and_altitude_no_data">No time and altitude data in this practice</string>
+    <string name="hr_zones_label">Hr zones</string>
+    <string name="hr_resting">Resting</string>
+    <string name="hr_level1">Very soft</string>
+    <string name="hr_level2">Soft</string>
+    <string name="hr_level3">Moderate</string>
+    <string name="hr_level4">Intense</string>
+    <string name="hr_maximum">Maximum</string>
+    <string name="of_time">of time</string>
+    <string name="in_restring">in resting</string>
+    <string name="in_hr_range1">in the very slow range</string>
+    <string name="in_hr_range2">in the slow range (burning fat)</string>
+    <string name="in_hr_range3">in the medium range (aerobic)</string>
+    <string name="in_hr_range4">in intense range (anaerobic)</string>
+    <string name="in_maximum_effort">at maximum range</string>
+    <string name="beats">Beats</string>
+    <string name="filter_activities">Filter activities</string>
+    <string name="stop_running_practice_first">First stop running practice</string>
+    <string name="stop_running_practice_to_choose_new_objetive">End current practice to choose a new target</string>
+    <string name="app_locked">Click on the padlock icon to unlock the application</string>
+    <string name="exif_tags_are_not_available">¡The Exif tags are not available!</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="tts_starting" translation_description="The part '&#8230;' of the string is the ellipsis.">Starting TextToSpeech engine&#8230;</string>
+    <string name="tts_started">TextToSpeech initialized</string>
+    <string name="tts_error">Failed to initialize TextToSpeech engine</string>
+    <string name="tts_stopping" translation_description="The part '&#8230;' of the string is the ellipsis.">Stopping TextToSpeech engine&#8230;</string>
+    <string name="tts_stopped">TextToSpeech stopped</string>
+    <string name="tts_language_is_not_available">The language for voice coach is not available</string>
+    <string name="tts_engine_says">The engine TextToSpeech says:</string>
+    <string name="add_new_shoe">Add new shoe</string>
+    <string name="add_new_shoe_info_missing">Remember to fill the two textboxes to add the shoe</string>
+    <string name="confirm_import_action">Import confirmation</string>
+    <string name="restore_backup_confirmation">Detected a backup. Do you want to restore?</string>
+    <string name="wait_restoring_backup" translation_description="The part '&#8230;' of the string is the ellipsis.">Importing information from the last backup. Wait&#8230;</string>
+    <string name="delete_confirm_action">Confirm delete action:</string>
+    <string name="delete_practice_confirm_action">Are you sure you want to delete practice</string>
+    <string name="delete_shoe_confirm_action">Are you sure you want to delete the shoe</string>
+    <string name="error_deleting_default_shoe">Before deleting this shoe, set a different as default</string>
+    <string name="edit_shoe">Edit shoe</string>
+    <string name="practices_to_import">Practice(s) to import:</string>
+    <string name="practices_to_export">Práctice(s) to export:</string>
+    <string name="files_no_selected" translation_description="The part '&#8230;' of the string is the ellipsis.">No selected file&#8230;</string>
+    <string name="activity_to_apply">Activity to apply:</string>
+    <string name="date_time_wrong_values">The character string date and/or time is/are incorrect(s)</string>
+    <string name="no_files_to_import_in_directory">There are no files to import in the directory</string>
+    <string name="with_moveon">with MoveOn Sports Tracker for Android</string>
+    <string name="calories_burned">calories burned</string>
+    <string name="click_to_view_or_download_gps_trace">Click here to view or download my route:</string>
+    <string name="practices_to_share">Practice(s) to share:</string>
+
+    <!-- About -->
+    <string name="about_license">License:</string>
+    <string name="about_license_description" translation_description="The '\n' is a carriage return.">MoveOn Sports Tracker is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nMoveOn Sports Tracker is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with MoveOn Sports Tracker. If not, see http://www.gnu.org/licenses/.</string>
+    <string name="about_version">Version:</string>
+    <string name="about_author_title">Author:</string>
+    <string name="about_author" translation_description="The '\n' is a carriage return.">Twitter: https://twitter.com/scintero\nPersonal website: www.saulcintero.com</string>
+    <string name="about_project_title">Project:</string>
+    <string name="about_project" translation_description="The '\n' is a carriage return.">Source code: https://github.com/scintero/moveon\nE-mail: contact@moveontracker.org\nOfficial website: www.moveontracker.org\nWeb administrator: https://twitter.com/socialangelr</string>
+
+</resources>

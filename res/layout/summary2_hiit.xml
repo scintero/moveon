@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/shadow" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_root"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/player_button_container_padding" >
+
+                <TextView
+                    android:id="@+id/summary2_item_one"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="75"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLength="29"
+                    android:singleLine="true"
+                    android:textColor="#ff7c00"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/summary2_item_two"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="50"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="29"
+                    android:singleLine="true"
+                    android:text="@string/time_uppercase"
+                    android:textColor="#ff7c00"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/summary2_item_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="50"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:maxLength="29"
+                    android:singleLine="true"
+                    android:text="@string/ritm_uppercase"
+                    android:textColor="#ff7c00"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/info_divider"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="#aeaeae" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/summary2_list_splitlaps"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#00000000"
+                    android:choiceMode="singleChoice"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:headerDividersEnabled="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

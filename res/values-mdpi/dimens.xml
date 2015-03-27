@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+
+    <!-- Text sizes -->
+    <dimen name="text_size_extra_micro">10sp</dimen>
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_bigger">35sp</dimen>
+    <dimen name="text_size_bigger_land">30sp</dimen>
+
+    <!-- Tabs -->
+    <dimen name="tab_padding_top_bottom">15dp</dimen>
+    <dimen name="tab_padding_left_right">40dp</dimen>
+
+    <!-- FastScroll padding -->
+    <dimen name="fast_scroll_padding_right">32dp</dimen>
+
+    <!-- List separator -->
+    <dimen name="list_separator_padding_left_right">8dp</dimen>
+    <dimen name="list_separator_min_height">32dp</dimen>
+    <dimen name="list_separator_container_padding_left">16dp</dimen>
+
+    <!-- ViewPager -->
+    <dimen name="viewpager_margin_stroke_width">0.5dp</dimen>
+    <dimen name="viewpager_top_margin">46dp</dimen>
+
+    <!-- Fragments -->
+    <dimen name="fragment_bottom_margin">53dp</dimen>
+
+    <!-- Top Bar -->
+    <dimen name="top_action_bar_height">40dp</dimen>
+
+    <!-- Bottom ActionBar -->
+    <dimen name="bottom_action_bar_height">48dp</dimen>
+    <dimen name="bottom_action_bar_item_width">56dp</dimen>
+    <dimen name="bottom_action_bar_item_padding_left_right">12dp</dimen>
+    <dimen name="bottom_action_bar_album_art_width_height">30dp</dimen>
+    <dimen name="bottom_action_bar_divider_height">2dp</dimen>
+    <dimen name="bottom_action_bar_info_padding_left">5dp</dimen>
+
+    <!-- ListView items -->
+    <dimen name="listview_item_height">64dp</dimen>
+    <dimen name="listview_items_padding_left_top">9dp</dimen>
+    <dimen name="listview_items_padding_right">85dp</dimen>
+    <dimen name="listview_peak_meter_one_padding_right">80dp</dimen>
+    <dimen name="listview_peak_meter_two_padding_right">70dp</dimen>
+    <dimen name="listview_album_art">64dp</dimen>
+
+    <!-- Quick Context Menu -->
+    <dimen name="quick_context_padding_right">4dp</dimen>
+    <dimen name="quick_context_line_height">30dp</dimen>
+    <dimen name="quick_context_line_width">1dp</dimen>
+    <dimen name="quick_context_margin_right">5dp</dimen>
+
+    <!-- Practice Player Bar -->
+    <dimen name="player_info_container_padding">16dp</dimen>
+    <dimen name="player_artwork_padding">20dp</dimen>
+    <dimen name="player_bar_height">42dp</dimen>
+    <dimen name="player_seek_bar_padding">10dp</dimen>
+    <dimen name="player_button_container_padding">2dp</dimen>
+
+    <!-- Practice LinearLayout -->
+    <dimen name="practice_linearlayout_1_top_portrait">5dp</dimen>
+    <dimen name="practice_linearlayout_2_top_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_4_top_portrait">2dp</dimen>
+    <dimen name="practice_linearlayout_5_top_portrait">5dp</dimen>
+    <dimen name="practice_linearlayout_1_bottom_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_2_bottom_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_4_bottom_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_5_bottom_portrait">5dp</dimen>
+    <dimen name="practice_linearlayout_1_left_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_2_left_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_4_left_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_5_left_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_1_right_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_2_right_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_4_right_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_5_right_portrait">0dp</dimen>
+    <dimen name="practice_linearlayout_1_top_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_2_top_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_4_top_landscape">2dp</dimen>
+    <dimen name="practice_linearlayout_5_top_landscape">5dp</dimen>
+    <dimen name="practice_linearlayout_1_bottom_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_2_bottom_landscape">3dp</dimen>
+    <dimen name="practice_linearlayout_4_bottom_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_5_bottom_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_1_left_landscape">5dp</dimen>
+    <dimen name="practice_linearlayout_2_left_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_4_left_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_5_left_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_1_right_landscape">5dp</dimen>
+    <dimen name="practice_linearlayout_2_right_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_4_right_landscape">0dp</dimen>
+    <dimen name="practice_linearlayout_5_right_landscape">0dp</dimen>
+
+    <!-- Summary1 LinearLayout -->
+    <dimen name="summary1_linearlayout_1_configuration1">0dp</dimen>
+    <dimen name="summary1_linearlayout_1_configuration2">2dp</dimen>
+    
+    <!-- Distance Marker Text Size For Summary1 Mapview -->
+    <item name="summary1_marker_text_size" format="float" type="dimen">14.0</item>
+    
+    <!-- AChartEngine values -->
+    <item name="line_labels_text_size_value" format="float" type="dimen">15.0</item>
+    <item name="xy_labels_text_size_value" format="float" type="dimen">15.0</item>
+    <item name="line2_labels_text_size_value" format="float" type="dimen">15.0</item>
+    <item name="pie_labels_text_size_value" format="float" type="dimen">15.0</item>
+    <item name="line_legend_text_size_value" format="float" type="dimen">15.0</item>
+    <item name="line2_legend_text_size_value" format="float" type="dimen">15.0</item>
+    <item name="pie_legend_text_size_value" format="float" type="dimen">18.0</item>
+    <item name="xy_legend_text_size_value" format="float" type="dimen">15.0</item>
+    <item name="line_axis_title_text_size_value" format="float" type="dimen">16.0</item>
+    <item name="line2_axis_title_text_size_value" format="float" type="dimen">16.0</item>
+    <item name="xy_axis_title_text_size_value" format="float" type="dimen">16.0</item>
+    <item name="line_chart_title_text_size_value" format="float" type="dimen">20.0</item>
+    <item name="line2_chart_title_text_size_value" format="float" type="dimen">20.0</item>
+    <item name="xy_chart_text_size_value" format="float" type="dimen">10.0</item>
+
+</resources>

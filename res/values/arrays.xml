@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+
+    <string-array name="tab_titles1">
+        <item>@string/tab_history</item>
+        <item>@string/tab_practice</item>
+        <item>@string/tab_statistics</item>
+    </string-array>
+    <string-array name="tab_titles2">
+        <item>@string/tab_summary1</item>
+        <item>@string/tab_summary2</item>
+        <item>@string/tab_summary3</item>
+        <item>@string/tab_summary4</item>
+    </string-array>
+    <string-array name="activities">
+        <item>@string/activity1</item>
+        <item>@string/activity2</item>
+        <item>@string/activity3</item>
+        <item>@string/activity4</item>
+        <item>@string/activity5</item>
+        <item>@string/activity6</item>
+        <item>@string/activity7</item>
+        <item>@string/activity8</item>
+        <item>@string/activity9</item>
+        <item>@string/activity10</item>
+        <item>@string/activity11</item>
+        <item>@string/activity12</item>
+        <item>@string/activity13</item>
+        <item>@string/activity14</item>
+        <item>@string/activity15</item>
+        <item>@string/activity16</item>
+        <item>@string/activity17</item>
+        <item>@string/activity18</item>
+        <item>@string/activity19</item>
+        <item>@string/activity20</item>
+        <item>@string/activity21</item>
+        <item>@string/activity22</item>
+        <item>@string/activity23</item>
+        <item>@string/activity24</item>
+        <item>@string/activity25</item>
+        <item>@string/activity26</item>
+        <item>@string/activity27</item>
+        <item>@string/activity28</item>
+        <item>@string/activity29</item>
+        <item>@string/activity30</item>
+        <item>@string/activity31</item>
+        <item>@string/activity32</item>
+        <item>@string/activity33</item>
+        <item>@string/activity34</item>
+        <item>@string/activity35</item>
+        <item>@string/activity36</item>
+        <item>@string/activity37</item>
+        <item>@string/activity38</item>
+        <item>@string/activity39</item>
+        <item>@string/activity40</item>
+        <item>@string/activity41</item>
+        <item>@string/activity42</item>
+        <item>@string/activity43</item>
+        <item>@string/activity44</item>
+        <item>@string/activity45</item>
+        <item>@string/activity46</item>
+        <item>@string/activity47</item>
+        <item>@string/activity48</item>
+    </string-array>
+
+    <array name="activities_icons">
+        <item>@drawable/activity1</item>
+        <item>@drawable/activity2</item>
+        <item>@drawable/activity3</item>
+        <item>@drawable/activity4</item>
+        <item>@drawable/activity5</item>
+        <item>@drawable/activity6</item>
+        <item>@drawable/activity7</item>
+        <item>@drawable/activity8</item>
+        <item>@drawable/activity9</item>
+        <item>@drawable/activity10</item>
+        <item>@drawable/activity11</item>
+        <item>@drawable/activity12</item>
+        <item>@drawable/activity13</item>
+        <item>@drawable/activity14</item>
+        <item>@drawable/activity15</item>
+        <item>@drawable/activity16</item>
+        <item>@drawable/activity17</item>
+        <item>@drawable/activity18</item>
+        <item>@drawable/activity19</item>
+        <item>@drawable/activity20</item>
+        <item>@drawable/activity21</item>
+        <item>@drawable/activity22</item>
+        <item>@drawable/activity23</item>
+        <item>@drawable/activity24</item>
+        <item>@drawable/activity25</item>
+        <item>@drawable/activity26</item>
+        <item>@drawable/activity27</item>
+        <item>@drawable/activity28</item>
+        <item>@drawable/activity29</item>
+        <item>@drawable/activity30</item>
+        <item>@drawable/activity31</item>
+        <item>@drawable/activity32</item>
+        <item>@drawable/activity33</item>
+        <item>@drawable/activity34</item>
+        <item>@drawable/activity35</item>
+        <item>@drawable/activity36</item>
+        <item>@drawable/activity37</item>
+        <item>@drawable/activity38</item>
+        <item>@drawable/activity39</item>
+        <item>@drawable/activity40</item>
+        <item>@drawable/activity41</item>
+        <item>@drawable/activity42</item>
+        <item>@drawable/activity43</item>
+        <item>@drawable/activity44</item>
+        <item>@drawable/activity45</item>
+        <item>@drawable/activity46</item>
+        <item>@drawable/activity47</item>
+        <item>@drawable/activity48</item>
+    </array>
+    <array name="display_type_icons">
+        <item>@drawable/time_small</item>
+        <item>@drawable/distance_small</item>
+        <item>@drawable/speed_small</item>
+        <item>@drawable/avg_speed_small</item>
+        <item>@drawable/max_speed_small</item>
+        <item>@drawable/ritm_small</item>
+        <item>@drawable/altitude_small</item>
+        <item>@drawable/calories_small</item>
+        <item>@drawable/steps_small</item>
+        <item>@drawable/heart_small</item>
+        <item>@drawable/cadence_small</item>
+    </array>
+    <array name="display_big_type_icons">
+        <item>@drawable/time_big</item>
+        <item>@drawable/distance_big</item>
+        <item>@drawable/speed_big</item>
+        <item>@drawable/avg_speed_big</item>
+        <item>@drawable/max_speed_big</item>
+        <item>@drawable/ritm_big</item>
+        <item>@drawable/altitude_big</item>
+        <item>@drawable/calories_big</item>
+        <item>@drawable/steps_big</item>
+        <item>@drawable/heart_big</item>
+        <item>@drawable/cadence_big</item>
+    </array>
+
+    <string-array name="display_info">
+        <item>@string/time_label</item>
+        <item>@string/distance_label</item>
+        <item>@string/speed_label</item>
+        <item>@string/avg_label</item>
+        <item>@string/max_speed_label</item>
+        <item>@string/ritm_label</item>
+        <item>@string/altitude_label</item>
+        <item>@string/calories_label</item>
+        <item>@string/steps_label</item>
+        <item>@string/beats_label</item>
+        <item>@string/cadence_label</item>
+    </string-array>
+    <string-array name="units_preference">
+        <item>@string/units_metric</item>
+        <item>@string/units_imperial</item>
+    </string-array>
+    <string-array name="units_preference_values">
+        <item>@string/long_unit1</item>
+        <item>@string/long_unit2</item>
+    </string-array>
+    <string-array name="gender_preference">
+        <item>@string/gender_male</item>
+        <item>@string/gender_female</item>
+    </string-array>
+
+    <!-- Don't translate gender_preference_values array -->
+    <string-array name="gender_preference_values">
+        <item>M</item>
+        <item>F</item>
+    </string-array>
+    <string-array name="countdown_entries">
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="general_countdown_entries">
+        <item>Desactivado</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="general_countdown_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="auto_pause_entries">
+        <item>@string/disabled</item>
+        <item>@string/auto_pause_value1</item>
+        <item>@string/auto_pause_value2</item>
+    </string-array>
+    <string-array name="auto_pause_values">
+        <item>0</item>
+        <item>2</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="operation_level_preference">
+        <item>@string/run_in_background</item>
+        <item>@string/keep_screen_on</item>
+        <item>@string/wake_up</item>
+    </string-array>
+
+    <!-- Don't translate operation_level_preference_values array -->
+    <string-array name="operation_level_preference_values">
+        <item>run_in_background</item>
+        <item>keep_screen_on</item>
+        <item>wake_up</item>
+    </string-array>
+    <string-array name="sensitivity_level_entries">
+        <item>@string/sensitivity_level1</item>
+        <item>@string/sensitivity_level2</item>
+        <item>@string/sensitivity_level3</item>
+        <item>@string/sensitivity_level4</item>
+        <item>@string/sensitivity_level5</item>
+        <item>@string/sensitivity_level6</item>
+        <item>@string/sensitivity_level7</item>
+        <item>@string/sensitivity_level8</item>
+        <item>@string/sensitivity_level9</item>
+    </string-array>
+    <string-array name="sensitivity_level_values">
+        <item>1.9753</item>
+        <item>2.9630</item>
+        <item>4.4444</item> <!-- 10 * 1.5^(-2) -->
+        <item>6.6667</item> <!-- 10 * 1.5^(-1) -->
+        <item>10</item>
+        <item>15</item> <!-- 10 * 1.5 -->
+        <item>22.5</item> <!-- 10 * 1.5^2 -->
+        <item>33.75</item>
+        <item>50.625</item>
+    </string-array>
+    <string-array name="map_tile_type_entries">
+        <item>@string/map_tile_type1</item>
+        <item>@string/map_tile_type2</item>
+        <item>@string/map_tile_type3</item>
+        <item>@string/map_tile_type4</item>
+        <item>@string/map_tile_type5</item>
+    </string-array>
+    <string-array name="map_tile_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <array name="sensor_type_values">
+        <item>@string/none</item>
+        <item>@string/polar_sensor_type</item>
+        <item>@string/zephyr_sensor_type</item>
+        <item>@string/btle_sensor_type</item>
+        <item>@string/ant_sensor_type</item>
+        <!-- item>@string/srm_ant_bridge_sensor_type</item -->
+    </array>
+
+    <string-array name="sensor_type_all_options">
+        <item>@string/value_none</item>
+        <item>@string/settings_sensor_type_polar</item>
+        <item>@string/settings_sensor_type_zephyr</item>
+        <item>@string/settings_sensor_type_btle</item>
+        <item>@string/settings_sensor_type_ant</item>
+    </string-array>
+    <string-array name="osm_visibility_choices">
+        <item>@string/osm_private</item>
+        <item>@string/osm_public</item>
+        <item>@string/osm_trackable</item>
+        <item>@string/osm_identifiable</item>
+    </string-array>
+    <string-array name="time_interval_preference_values">
+        <item>@string/disabled</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="time_interval_preference">
+        <item>@string/disabled</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="distance_interval_preference_values">
+        <item>@string/disabled</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="distance_interval_preference">
+        <item>@string/disabled</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="choice_time_list">
+        <item>@string/choice_time1</item>
+        <item>@string/choice_time2</item>
+        <item>@string/choice_time3</item>
+        <item>@string/choice_time4</item>
+        <item>@string/choice_time5</item>
+    </string-array>
+
+</resources>

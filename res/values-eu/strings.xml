@@ -1,0 +1,805 @@
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+
+    <!-- App details -->
+    <string name="app_name">MoveOn</string>
+    <string name="app_complete_name">MoveOn Sports Tracker</string>
+
+    <!-- Keys for persisted preferences. Don't translate this. -->
+    <string name="bluetooth_sensor_key">bluetoothSensor</string>
+    <string name="sensor_type_key">sensorType</string>
+
+    <!-- Sensor Types. Don't translate this. -->
+    <string name="none">NONE</string>
+    <string name="polar_sensor_type">POLAR</string>
+    <string name="zephyr_sensor_type">ZEPHYR</string>
+    <string name="ant_sensor_type">ANT</string>
+    <string name="btle_sensor_type">BLUETOOTH LE</string>
+
+    <!-- Sensor states -->
+    <string name="sensor_data_time">Sentsorearen datuen ordua</string>
+    <string name="power_meter_enabled">Bateriaren sentsorea aktibatuta</string>
+    <string name="heart_rate_monitor_enabled">Bihotzeko erritmoaren monitorea aktibatuta</string>
+    <string name="no_sensor_manager">Ez dago sentsore-kudeatzailerik</string>
+    <string name="enabled">Aktibatuta</string>
+    <string name="disabled">Desaktibatuta</string>
+    <string name="sensor_state_connecting">Konektatzen</string>
+    <string name="sensor_state_connected">Konektatuta</string>
+    <string name="sensor_state_disconnected">Deskonektatuta</string>
+    <string name="sensor_state_sending">Sentsorea igortzen ari da</string>
+    <string name="no_sensor_service">Ez dago sentsore-zerbitzurik</string>
+    <string name="searching">Bilatzen</string>
+    <string name="sending">Igortzen</string>
+    <string name="sensor_type">Sentsore-mota</string>
+    <string name="settings_sensor_ant_not_connected" translation_description="In the 'Sensor' settings, the summary to indicate that an ANT+ sensor
+      	is not connected.">Konektatu gabe</string>
+    <string name="settings_sensor_connected" translation_description="A message when a sensor is connected.
+		%1$s: sensor name. E.g., 'Polar Bluetooth'.">Honekin konektatuta: %1$s</string>
+    <string name="settings_sensor_ant_paired" translation_description="In the 'Sensor' settings, the summary to indicate that an ANT+ sensor
+      	is paired. Note that ANT+ is a radio standard.
+      	%1$d: device id number. E.g., '1'.">Honekin lotua: %1$d</string>
+
+    <!-- Sensor settings values -->
+    <string name="value_none" translation_description="In a setting picker, the value to pick none of the options.">Batere ez</string>
+    <string name="settings_sensor_type_polar" translation_description="In the 'Sensor' settings, the option in the 'Sensor type' picker to
+      	choose a Polar bluetooth sensor.">Polar Bluetooth</string>
+    <string name="settings_sensor_type_zephyr" translation_description="In the 'Sensor' settings, the option in the 'Sensor type' picker to
+      	choose a Zephyr bluetooth sensor.">Zephyr Bluetooth (esperimentala)</string>
+    <string name="settings_sensor_type_btle">Smart Bluetooth -LE- (esperimentala)</string>
+    <string name="settings_sensor_type_ant" translation_description="In the 'Sensor' settings, the option in the 'Sensor type' picker to
+      	choose an ANT+ sensor. Note that ANT+ is a radio standard.">ANT+</string>
+    <string name="settings_sensor_ant_reset_heart_rate_monitor" translation_description="In the 'Sensor' settings, under the 'ANT+' section, the option to reset
+      	an ANT+ heart rate monitor. Note that ANT+ is a radio standard.">Pultsoa leheneratzea</string>
+    <string name="settings_sensor_ant_reset_speed_distance_monitor" translation_description="In the 'Sensor' settings, under the 'ANT+' section, the option to reset
+      	an ANT+ stride based speed distance monitor, also known as foot pod. Note that ANT+ is a radio
+      	standard.">Podometroa leheneratzea (esperimentala)</string>
+    <string name="settings_sensor_ant_reset_bike_cadence_sensor" translation_description="In the 'Sensor' settings, under the 'ANT+' section, the option to reset
+      	an ANT+ bike cadence sensor. Note that ANT+ is a radio standard.">Bizikleta kadentzia leheneratzea (esperimentala)</string>
+    <string name="settings_sensor_ant_reset_combined_bike_sensor" translation_description="In the 'Sensor' settings, under the 'ANT+' section, the option to reset
+      	an ANT+ combined bike cadence and speed sensor. Note that ANT+ is a radio standard.">Bizikleta konbinatua leheneratzea (esperimentala)</string>
+
+    <!-- Images gallery -->
+    <string name="image_resource_missing">Bisualizatu nahi duzun baliabide hori ez dago edo ez dago eskura</string>
+
+    <!-- Notification bar -->
+    <string name="local_service_started">Aplikazioa egikaritzen ari da. Klikatu hemen aurrera ekartzeko.</string>
+
+    <!-- Tabs -->
+    <string name="tab_history">HISTORIALA</string>
+    <string name="tab_practice">NAGUSIA</string>
+    <string name="tab_statistics">ESTATISTIKAK</string>
+    <string name="tab_summary1">LABURPENA</string>
+    <string name="tab_summary2">PARTZIALAK</string>
+    <string name="tab_summary3">GRAFIKOAK</string>
+    <string name="tab_summary4">BF</string>
+
+    <!-- Activities -->
+    <string name="activity1">Ibili</string>
+    <string name="activity2">Korrika egin</string>
+    <string name="activity3">Eskailerak igo</string>
+    <string name="activity4">Kirol txirrindularitza</string>
+    <string name="activity5">Mendi txirrindularitza</string>
+    <string name="activity6">Spinning</string>
+    <string name="activity7">Mendizaletasuna</string>
+    <string name="activity8">Futbola</string>
+    <string name="activity9">Saskibaloia</string>
+    <string name="activity10">Eskubaloia</string>
+    <string name="activity11">Tenisa</string>
+    <string name="activity12">Skateboardinga</string>
+    <string name="activity13">Beisbola</string>
+    <string name="activity14">Gidatu (autoa)</string>
+    <string name="activity15">Gidatu (motoa)</string>
+    <string name="activity16">Gidatu (quad bat)</string>
+    <string name="activity17">Borroka-arteak</string>
+    <string name="activity18">Boxeoa</string>
+    <string name="activity19">Squasha</string>
+    <string name="activity20">Trekkinga</string>
+    <string name="activity21">Patinatu</string>
+    <string name="activity22">Izotz gainean patinatu</string>
+    <string name="activity23">Eskiatu</string>
+    <string name="activity24">Snowboardinga</string>
+    <string name="activity25">Iraupen-eskia</string>
+    <string name="activity26">Arraunketa</string>
+    <string name="activity27">Nabigazioa</string>
+    <string name="activity28">Billarra</string>
+    <string name="activity29">Golfa</string>
+    <string name="activity30">Bola-jokoa</string>
+    <string name="activity31">Ping-ponga</string>
+    <string name="activity32">Ekitazioa</string>
+    <string name="activity33">Soka-saltoan ibili</string>
+    <string name="activity34">Petanka</string>
+    <string name="activity35">Boleibola</string>
+    <string name="activity36">Pilates</string>
+    <string name="activity37">Yoga</string>
+    <string name="activity38">Errugbia</string>
+    <string name="activity39">Hockeya</string>
+    <string name="activity40">Igeriketa</string>
+    <string name="activity41">Surfa</string>
+    <string name="activity42">Windsurfa</string>
+    <string name="activity43">Urpean igeri egin</string>
+    <string name="activity44">Alpinismoa</string>
+    <string name="activity45">Dantza</string>
+    <string name="activity46">Delta hegala</string>
+    <string name="activity47">Arku-tiroa</string>
+    <string name="activity48">Bestelakoak</string>
+
+    <!-- GPS status -->
+    <string name="bad_signal">Seinale baxua</string>
+    <string name="weak_signal">Seinale moderatua</string>
+    <string name="good_signal">Seinale altua</string>
+    <string name="excellent_signal">Seinale bikaina</string>
+
+    <!-- Bottom action bar -->
+    <string name="voice_coach">Ixildu edo aktibatu ahots bidezko entrenatzailea</string>
+    <string name="camera">Egin argazkiak zure ariketetan</string>
+    <string name="padlock">Blokeatu kontrolak</string>
+    <string name="music">Abiarazi musika-erreproduzitzailea</string>
+    <string name="settings">Aplikazioaren doikuntzak</string>
+    <string name="add">Inportatu ariketa berri bat edo batzuk</string>
+    <string name="export">Esportatu ariketa bat edo batzuk</string>
+    <string name="share">Partekatu zure ariketak gizarte sareetan</string>
+    <string name="create">Sortu ariketa-gida berri bat</string>
+    <string name="filter">Bilatu ariketak denboraldien edo/eta ekintza moten araberaz</string>
+
+    <!-- 'loading' form -->
+    <string name="loading" translation_description="The part '&#8230;' of the string is the ellipsis.">KARGATZEN&#8230;</string>
+    <string name="wait_until_app_begins" translation_description="The part '&#8230;' of the string is the ellipsis.">Itxaron programa hasi arte behar bezala ateratzeko&#8230;</string>
+
+    <!-- 'main' form -->
+    <string name="display_type_one">Aldatu erakustekoa den informazio mota</string>
+    <string name="display_type_two">Hautatu ariketaren helburua</string>
+    <string name="display_type_three">Aldatu ariketaren jarduera</string>
+    <string name="gps">Ireki GPSa aktibatzeko formularioa</string>
+    <string name="start">Ariketa berri bat hasi</string>
+    <string name="play_label">Ariketa eten edo berriz hasi</string>
+    <string name="play_1">Eten</string>
+    <string name="play_2">Berriz hasi</string>
+    <string name="stop">Gelditu</string>
+    <string name="stop_label">Ariketa gelditu</string>
+    <string name="mapview_full_screen">Erakutsi maparen bista pantaila osoan</string>
+    <string name="mapview_follow_location">Aktibatu jarraipen automatikoa</string>
+    <string name="activity">JARDUERA</string>
+    <string name="start_activity">Ariketari hasiera eman</string>
+
+    <!-- 'history' form -->
+    <string name="history_wellcome" translation_description="Simple quotation mark + backslash is a single quotation mark.">Entrenamendu berri batekin hasi, pantaila nagusitik \'Ariketari hasiera eman\' botoia sakatuz.</string>
+    <string name="history_sessions">SAIOAK</string>
+    <string name="history_duration">IRAUPENA</string>
+    <string name="history_calories">KALORIAK</string>
+
+    <!-- 'statistics' form -->
+    <string name="statistics_start">Sortu entrenamendu berriak eta kontsultatu hemen zure ariketen estatitiskak.</string>
+    <string name="statistics_label1">ARIKETAK GUZTIRA</string>
+    <string name="statistics_label2">IRAUPENA GUZTIRA</string>
+    <string name="statistics_label3">DISTANTZIA GUZTIRA</string>
+    <string name="statistics_label4">IGO. METAT. GUZTIRA</string>
+    <string name="statistics_label5">JAITS. METAT. GUZTIRA</string>
+    <string name="statistics_label6">BATEZBEST. ABIADURA </string>
+    <string name="statistics_label7">ATEZBEST. DENBORA</string>
+    <string name="statistics_label8">ZAP. ERABILIENA</string>
+    <string name="statistics_label9">KALORIAK GUZTIRA</string>
+    <string name="statistics_label10">URRATSAK GUZTIRA</string>
+    <string name="statistics_label11">BATEZBEST. BF</string>
+    <string name="statistics_label12">KONTSUMITUTAKO HANB.</string>
+    <string name="statistics_label13">UNDUARI ITZULIAK</string>
+    <string name="statistics_label14">ILARGIRAKO BIDAIAK</string>
+
+    <!-- 'summary1' form -->
+    <string name="shoe">Zapatilla</string>
+    <string name="comments">Oharrak</string>
+    <string name="accum_ascent">Igo. akum.</string>
+    <string name="accum_descent">Jaits. akum.</string>
+    <string name="avg_cadence">Batezbest. kad.</string>
+    <string name="max_cadence">Gehienezko kad.</string>
+    <string name="pauses">Etenaldiak</string>
+    <string name="gallery_pictures">Argazkiak</string>
+
+    <!-- 'shoes' form -->
+    <string name="empty_shoes_list" translation_description="Simple quotation mark + backslash is a single quotation mark.
+        The '\n' is a carriage return.">Zure zapatillen zerrenda hutsik dago.\Erantsi berri bat pantailaren goiko aldean ikusiko duzun \'+\' botoia sakatuz.</string>
+
+    <!-- 'hiit' form -->
+    <string name="empty_interval_list" translation_description="Simple quotation mark + backslash is a single quotation mark.
+        The '\n' is a carriage return.">Zure tarteen zerrenda hutsik dago.\Erantsi berri bat pantailaren goiko aldean ikusiko duzun \'+\' botoia sakatuz.</string>
+
+    <!-- 'hiit_pressets' form -->
+    <string name="hiit_name_hint" translation_description="The part '&#8230;' of the string is the ellipsis.">Erantsi izen deskriptibo bat&#8230;</string>
+    <string name="hiit_pressets_warm_up">Beroketa:</string>
+    <string name="laps">Txandak:</string>
+    <string name="hiit_pressets_recovery">Leheneratzea:</string>
+    <string name="hiit_pressets_intervals_label">Sartu tarte berriak:</string>
+    <string name="hiit_pressets_training_name">Entrenamenduaren izena:</string>
+
+    <!-- 'summary2' form -->
+    <string name="split_laps_one_long_unit1">1 km</string>
+    <string name="split_laps_two_long_unit1">2 km</string>
+    <string name="split_laps_three_long_unit1">5 km</string>
+    <string name="split_laps_four_long_unit1">10 km</string>
+    <string name="split_laps_five_long_unit1">20 km</string>
+    <string name="split_laps_one_long_unit2">1 mi</string>
+    <string name="split_laps_two_long_unit2">2 mi</string>
+    <string name="split_laps_three_long_unit2">5 mi</string>
+    <string name="split_laps_four_long_unit2">10 mi</string>
+    <string name="split_laps_five_long_unit2">20 mi</string>
+    <string name="split_laps_label">Erakutsi informazioa, aukeratutako denbora tarteaz zatituta</string>
+
+    <!-- 'summary3 form -->
+    <string name="no_location_info">Ariketa honek ez dauka altitude eta abiadurari buruzko informaziorik.</string>
+    <string name="no_info_selected">Ez duzu inolako irizpiderik aukeratu grafikoa marrazteko.</string>
+
+    <!-- 'summary4 form -->
+    <string name="no_hr_info">Ariketa honek ez dauka bihotz frekuentziari buruzko informaziorik edo erabiltzailearen doikuntza-menuaren barruan ez dira bete bihotzari buruzko beharrezko datuak.</string>
+
+    <!-- 'add_or_edit_hiit_interval' form -->
+    <string name="type_hiit">Mota:</string>
+    <string name="time_hiit">Denbora:</string>
+    <string name="min_hiit">MIN</string>
+    <string name="sec_hiit">SEG</string>
+
+    <!-- 'hiit form -->
+    <string name="hiit_interval_label">Nire tarteak</string>
+
+    <!-- 'history_custom_filter form -->
+    <string name="activity_filter">Jarduera:</string>
+    <string name="date_filter">Data:</string>
+
+    <!-- 'add_practice and edit_practice form -->
+    <string name="add_edit_date_and_hour_label">Data eta ordua:</string>
+    <string name="add_edit_time_label">Iraupena:</string>
+    <string name="add_edit_distance_label">Distantzia:</string>
+    <string name="add_edit_avg_speed_label">Abiadura maximoa:</string>
+    <string name="add_edit_max_speed_label">Velocidad máxima:</string>
+    <string name="add_edit_max_altitude_label">Altitude maximoa</string>
+    <string name="add_edit_min_altitude_label">Altitude minimoa</string>
+    <string name="add_edit_up_accum_altitude_label">Igoeran akumulatutako altitudea:</string>
+    <string name="add_edit_down_accum_altitude_label">Jaitsieran akumulatutako altitudea:</string>
+    <string name="add_edit_kcal_label">Kaloriak:</string>
+    <string name="add_edit_steps_label">Urratsak:</string>
+    <string name="add_edit_avg_fc_label">Batezbesteko BF:</string>
+    <string name="add_edit_max_fc_label">BF maximoa:</string>
+    <string name="add_edit_avg_cadence_label">Batezbesteko kadentzia:</string>
+    <string name="add_edit_max_cadence_label">Kadentzia maximoa:</string>
+
+    <!-- 'karvonen form -->
+    <string name="birthday">Jaioteguna:</string>
+    <string name="resting_hr">BF atsedenean (taup/min):</string>
+    <string name="calculate">Kalkulatu</string>
+    <string name="max_hr">BF max. zenbatetsia:</string>
+    <string name="hr_zone1" translation_description="The part '&#8211;' of the string is a dash symbol.">50&#8211;60 %</string>
+    <string name="hr_zone2" translation_description="The part '&#8211;' of the string is a dash symbol.">60&#8211;70 %</string>
+    <string name="hr_zone3" translation_description="The part '&#8211;' of the string is a dash symbol.">70&#8211;80 %</string>
+    <string name="hr_zone4" translation_description="The part '&#8211;' of the string is a dash symbol.">80&#8211;90 %</string>
+    <string name="hr_zone5" translation_description="The part '&#8211;' of the string is a dash symbol.">90&#8211;100 %</string>
+
+    <!-- 'import_task_previous_details' form -->
+    <string name="import_task_date_time">Data,ordua:</string>
+    <string name="import_task_delete_file">Amaitzean fitxategia(k) ezabatu</string>
+
+    <!-- 'practice_details' form -->
+    <string name="discard">Baztertu</string>
+    <string name="finish">Amaitu</string>
+
+    <!-- 'shoe_custom_dialog' form -->
+    <string name="brand_and_model">Marka eta eredua:</string>
+    <string name="start_distance">Hasierako distantzia:</string>
+    <string name="default_shoe">Lehenetsi bezala markatu</string>
+
+    <!-- 'sharing content' form -->
+    <string name="name_label">Ariketaren izena:</string>
+    <string name="shoe_label">Zapatilla:</string>
+    <string name="comments_label">Oharrak:</string>
+    <string name="comments_hint_label" translation_description="The part '&#8230;' of the string is the ellipsis.">Erantsi hemen zure oharrak&#8230;</string>
+    <string name="hours_label">h.</string>
+    <string name="minutes_label">m.</string>
+    <string name="seconds_label">s.</string>
+    <string name="time_uppercase">DENBORA</string>
+    <string name="ritm_uppercase">ERRITMO/PARTZIALA</string>
+    <string name="ok">Onartu</string>
+    <string name="save">Gorde</string>
+    <string name="cancel">Kantzelatu</string>
+
+    <!-- Information details -->
+    <string name="time_label">Iraupena</string>
+    <string name="distance_label">Distantzia</string>
+    <string name="avg_label">Batezbest. abiad.</string>
+    <string name="avg_label_complete">Batezbesteko abiadura</string>
+    <string name="calories_label">Kaloriak</string>
+    <string name="single_calories_label">Kaloria</string>
+    <string name="speed_label">Abiadura</string>
+    <string name="max_speed_label">Abiad. max.</string>
+    <string name="max_speed_label_complete">Abiadura maximoa</string>
+    <string name="ritm_label">Batezbest. errit.</string>
+    <string name="ritm_label_complete">Batezbesteko erritmoa</string>
+    <string name="altitude_label">Altitudea</string>
+    <string name="up_accum_altitude_label_complete">Akumulatutako igoera-altitudea</string>
+    <string name="down_accum_altitude_label_complete">Akumulatutako jaitsiera-altitudea</string>
+    <string name="max_altitude_label">Altitude max.</string>
+    <string name="max_altitude_label_complete">Altitude maximoa</string>
+    <string name="min_altitude_label">Altitude min.</string>
+    <string name="min_altitude_label_complete">Altitude minimoa</string>
+    <string name="steps_label">Urratsak</string>
+    <string name="beats_label">Bihotzaren frek.</string>
+    <string name="beats_avg_label">Batezbesteko BF</string>
+    <string name="max_beats_label">BF maximoa</string>
+    <string name="heart_rate_label_complete">Taupadak minutuko</string>
+    <string name="cadence_label">Kadentzia (esperimentala)</string>
+    <string name="avg_cadence_label">Batezbesteko kadentzia</string>
+    <string name="max_cadence_label">Kadentzia maximoa</string>
+    <string name="cadence_label_complete">Birak minutuko</string>
+
+    <!-- Information details values -->
+    <string name="time_value">00:00:00</string>
+    <string name="ritm_value">00:00</string>
+    <string name="zero_value">0</string>
+    <string name="two_zeros_value">00</string>
+    <string name="zero_with_one_decimal_place_value">0.0</string>
+    <string name="zero_with_two_decimal_places_value">0.00</string>
+    <string name="zero_with_three_decimal_places_value">0.000</string>
+    <string name="one_value">1</string>
+
+    <!-- Metric units -->
+    <string name="long_unit1">Metrikoa</string>
+    <string name="kilograms">kilogramoak</string>
+    <string name="long_unit2">Inperiala</string>
+    <string name="pounds">librak</string>
+    <string name="long_unit1_detail_1">km</string>
+    <string name="long_unit1_detail_2">km/h</string>
+    <string name="long_unit1_detail_3">min/km</string>
+    <string name="long_unit1_detail_4">m</string>
+    <string name="long_unit1_detail_5">Kilometro</string>
+    <string name="long_unit1_detail_6">metro</string>
+    <string name="long_unit1_detail_7">Kilometroak orduko</string>
+    <string name="long_unit1_detail_8">kilometroko</string>
+    <string name="long_unit1_detail_9">Kilometro</string>
+    <string name="long_unit1_detail_10">metro</string>
+
+    <!-- Imperial units -->
+    <string name="long_unit2_detail_1">mi</string>
+    <string name="long_unit2_detail_2">mh</string>
+    <string name="long_unit2_detail_3">min/mi</string>
+    <string name="long_unit2_detail_4">yd</string>
+    <string name="long_unit2_detail_5">Milla</string>
+    <string name="long_unit2_detail_6">yarda</string>
+    <string name="long_unit2_detail_7">Milla orduko</string>
+    <string name="long_unit2_detail_8">millako</string>
+    <string name="long_unit2_detail_9">milla</string>
+    <string name="long_unit2_detail_10">yarda</string>
+
+    <!-- Time units -->
+    <string name="hours_first_letter">h</string>
+    <string name="minutes_first_letter">m</string>
+    <string name="seconds_first_letter">s</string>
+
+    <!-- GPS States -->
+    <string name="gps_off">GPS seinalerik gabe</string>
+    <string name="gps_searching" translation_description="The part '&#8230;' of the string is the ellipsis.">GPS lokalizazio berriak bilatzen&#8230;</string>
+    <string name="gps_on">GPSa prest!</string>
+
+    <!-- Time or Distance Notification Intervals / Add Or Edit Hiit Interval Activities strings -->
+    <string name="interval_error_saving_value">Tartea gordetzeko lehenago balio bat idatzi behar duzu</string>
+    <string name="interval_error_in_number">Tartearen balioa ez da baliozko zenbakia</string>
+    <string name="minutes_interval_error_in_number">Minutu-tartearen balioa ez da baliozko zenbakia edo 59tik gorakoa da</string>
+    <string name="seconds_interval_error_in_number">Segundu-tartearen balioa ez da baliozko zenbakia edo 59tik gorakoa da</string>
+
+    <!-- Settings -->
+    <string name="menu_settings">Doikuntzak</string>
+    <string name="general_settings_title">Oinarrizko lehenespenak</string>
+    <string name="general_settings_details">Unitate metrikoak, atzerako kontaketa, blokeo automatikoa eta auto-etena</string>
+    <string name="units_setting">Neurketa unitatea</string>
+    <string name="units_setting_details">Unitate metrikoa edo inperiala</string>
+    <string name="units_setting_title">Aukeratu tipoa</string>
+    <string name="units_metric">Kilometroak, metrikoa</string>
+    <string name="units_imperial">Millak, inperiala</string>
+    <string name="user_setting">Erabiltzailearen doikuntzak</string>
+    <string name="user_setting_details">Konfiguratu zure profilaren doikuntzak kaloriak zehatzago kalkulatzeko edo administratu zure zapatillak hemen</string>
+    <string name="karvonen_setting">Bihotz frekuentziaren tarteak</string>
+    <string name="karvonen_setting_title">Konfiguratu zure BFaren datuak</string>
+    <string name="karvonen_setting_details">Konfiguratu hemen zure bihotz frekuentziaren datuak edo automatikoki kalkulatu</string>
+    <string name="shoes_setting">Administratu zure zapatillak</string>
+    <string name="shoes_setting_title">Nire zapatillak</string>
+    <string name="shoes_setting_details">Sortu zapatilla berriak, ezabatu erabiltzen ez dituzunak edo egiaztatu horietako bakoitza zenbat aldiz erabiltzen duzun</string>
+    <string name="add_shoe">Erantsi beste zapatilla bat zerrendari</string>
+    <string name="add_hiit">Erantsi tartekako entrenamendu berri bat zerrendari</string>
+    <string name="add_hiit_interval">Erantsi tarte berri bat</string>
+    <string name="body_weight_setting">Gorputzaren pisua</string>
+    <string name="necessary_to_calculate_calories">Kaloriak kalkulatzeko beharrezkoa</string>
+    <string name="body_weight_setting_title">Sartu zure gorputzaren pisu</string>
+    <string name="gender_setting">Sexua</string>
+    <string name="gender_setting_title">Hautatu zure sexua</string>
+    <string name="gender_male">Gizonezkoa</string>
+    <string name="gender_female">Emakumezkoa</string>
+    <string name="auto_pause_setting_title">Auto-etena</string>
+    <string name="auto_pause_setting_details">Konfiguratu noiz aktibatu autoetena (ezin zaio aplikatu tartekako entrenamenduari)</string>
+    <string name="auto_pause_value1">Orduko 2 km baino gutxiago</string>
+    <string name="auto_pause_value2">Orduko 5 km baino gutxiago</string>
+    <string name="sensitivity_title">Sentsibilitatea</string>
+    <string name="sensitivity_details">Kalibratu mugimenduaren sentsorea (podometroa)</string>
+    <string name="sensitivity_settings_title">Hautatu sentsibilitate-maila</string>
+    <string name="sensitivity_level1">Gorena</string>
+    <string name="sensitivity_level2">Estra altua</string>
+    <string name="sensitivity_level3">Oso altua</string>
+    <string name="sensitivity_level4">Altua</string>
+    <string name="sensitivity_level5">Erdikoa</string>
+    <string name="sensitivity_level6">Baxua</string>
+    <string name="sensitivity_level7">Oso baxua</string>
+    <string name="sensitivity_level8">Estra baxua</string>
+    <string name="sensitivity_level9">Behe mailakoa</string>
+    <string name="map_tile_title">Mapa</string>
+    <string name="map_tile_details">Hautatu erakutsi beharreko mapa-mota</string>
+    <string name="map_tile_settings_title">Mapa-motak</string>
+    <string name="map_tile_type1">Mapnik</string>
+    <string name="map_tile_type2">CycleMap</string>
+    <string name="map_tile_type3">OSMPublicTransport</string>
+    <string name="map_tile_type4">MapquestOSM</string>
+    <string name="map_tile_type5">MapquestAerial</string>
+    <string name="screen_settings_title">Pantaila doitzea</string>
+    <string name="operation_level_setting">Maila aukeratu</string>
+    <string name="operation_level_setting_details">Gailu batzuk mugimendu-sentsoreen erabilera prebenitzen dute pantaila itzalita dagoenean. Hauta ezazu zure terminalari ondoen egokitzen zaion maila.</string>
+    <string name="run_in_background">Normala (bigarren planoan egikaritzen da)</string>
+    <string name="keep_screen_on">Altua (pantaila ilun mantentzen du)</string>
+    <string name="wake_up">Agresiboa (pantaila itzaltzen denean esnatzen da)</string>
+    <string name="voice_settings_title">Audio lehentasunak</string>
+    <string name="voice_settings_details">Konfiguratu entrenatzaile birtuala, soinuak edo alertak</string>
+    <string name="voice_title">Ahotsa</string>
+    <string name="voice_setting">Ahotsaren bidezko informazioa</string>
+    <string name="voice_setting_details">Aktibatu/desaktibatu soinuei buruzko abisuak</string>
+    <string name="voice_summary">Entrenatzaile birtualaren ahots-doikuntza orokorrak</string>
+    <string name="speaking_time_interval_setting">Aukeratu denbora tartea</string>
+    <string name="speaking_time_interval_setting_title">Aukeratu tartea (minutuak)</string>
+    <string name="speaking_time_interval_setting_details">Soinu-abisuen arteko denbora-tartea tartea</string>
+    <string name="speaking_distance_interval_setting">Aukeratu distantzia tartea</string>
+    <string name="speaking_distance_interval_setting_title">Aukeratu tartea (km. edo mi.)</string>
+    <string name="speaking_distance_interval_setting_details">Soinu-abisuen arteko distantzia-tartea</string>
+    <string name="tell_what">Informazioa aukeratu</string>
+    <string name="tell_what_setting_details">Pertsonalizatu jakinarazi beharreko informazioa</string>
+    <string name="tell_units_details">Kilometroak edo millak</string>
+    <string name="tell_speed_units_setting_details">km/h edo m/h</string>
+    <string name="tell_calories_setting">Kontsumitutako kaloriak</string>
+    <string name="tell_calories_setting_details">kcal</string>
+    <string name="tell_altitude_setting_details">metroak edo yardak</string>
+    <string name="tell_heart_rate_setting">Bihotzaren erritmoa</string>
+    <string name="tell_cadence_setting">Kadentzia</string>
+    <string name="audio_settings_title">(HIIT) Alertak eta soinuak</string>
+    <string name="countdown_title">Atzerako kontaketako denbora</string>
+    <string name="countdown_summary">Konfiguratu atzerako kontaketa denbora ariketarekin hasi aurretik</string>
+    <string name="lock_title">Blokeo automatikoa</string>
+    <string name="lock_summary">Aplikazioa ariketarekin hasi orduko blokeatzen da</string>
+    <string name="hiit_summary">HIITrako alerta eta soinuen doikuntzak</string>
+    <string name="hiit_countdown_summary">Konfiguratu soinu eta/edo ahotsezko alerten denbora</string>
+    <string name="hiit_countdown_tts_title">Ahots bidezko atzerako kontaketa</string>
+    <string name="hiit_current_interval_title">Ahots bidezko oraingo tartea</string>
+    <string name="hiit_current_interval_summary">Hasi orduko iragartzen du oraingo tartea (tarte hori atzerako kontaketa denbora + hurrengo tartearen abisuarentzako 6 seg. baino gehiagokoa ez bada, ez da egingo)</string>
+    <string name="hiit_next_interval_title">Ahots bidezko hurrengo tartea</string>
+    <string name="hiit_next_interval_summary">Atzerako kontaketa aurreko hurrengo tartea iragartzen du (tarte hori, atzerako kontaketa denbora + oraingo tartearen abisuarentzako 6 seg. –aktibatuta egonez gero– + hurrengo tartearen abisuarentzako 6 seg. baino gehiagokoa ez bada, ez da egingo)</string>
+    <string name="hiit_sound_title">Soinu bidezko abisua</string>
+    <string name="hiit_sound_summary">Soinu bidezko alertak erabili</string>
+    <string name="hiit_vibrate_title">Bibrazio bidezko jakinarazpena</string>
+    <string name="hiit_vibrate_summary">Alertetan bibratu</string>
+    <string name="accessories_type_title">Osagarriak</string>
+    <string name="accessories_type_summary">Bluetooth edo ANT+ sentsoreak</string>
+    <string name="bt_title">Bluetooth sinkronizatzea</string>
+    <string name="bt_summary">Bluetoothen doiketak irekitzeko aukera ematen du sentsore bat sinkronizatzeko</string>
+    <string name="bt_sensor">Bluetooth sentsorea</string>
+    <string name="osm_setup_title">Konektatu eta argitaratu</string>
+    <string name="osm_setup_summary">GPS ibilbideak igotzeko baimena, etiketak, deskribapena eta ikusgaitasuna ezartzen ditu</string>
+    <string name="osm_lbl_authorize">Baimendu app hau</string>
+    <string name="osm_lbl_authorize_description">Baimenak eman behar zaizkio app honi GPS erregistroak OpenStreetMap-era kargatzeko. Gero hemendik definitu ahalko dituzu etiketak, deskribapenak eta ikusgaitasuna.</string>
+    <string name="osm_visibility">Ikusgaitasuna</string>
+    <string name="osm_visibility_summary">Igo nahi dituzun zure GPS aztarnen ikusgaitasuna ezartzen du</string>
+    <string name="osm_description">Deskribapena</string>
+    <string name="osm_description_summary">Aztarna igotzean erabiliko den deskribapena</string>
+    <string name="osm_tags">Etiketak</string>
+    <string name="osm_tags_summary">Aztarna igotzean aplikatu beharreko etiketak</string>
+    <string name="osm_resetauth">Baimena ezabatu</string>
+    <string name="osm_resetauth_summary">Zure OSM kontuarekin komunikatzeko tokiko baimena ezabatzen du</string>
+    <string name="osm_auth_error">Akats bat gertatu da OpenStreetMap-en zerbitzariekin kontaktatu nahi zenean. Egiazta ezazu Interneteko lotura aktibatua daukazula edo saiatu geroago.</string>
+    <string name="about_title" translation_description="The part '&#8230;' of the string is the ellipsis.">Honen inguruan&#8230;</string>
+    <string name="about_details">MoveOn Sports Tracker buruzko xehetasuna</string>
+
+    <!-- Audio trainer -->
+    <string name="tts_start_practice">Lixto!</string>
+    <string name="tts_pause_practice">Ariketa eten egin da!</string>
+    <string name="tts_resume_practice">Ariketa berriz hasi da!</string>
+    <string name="tts_stop_practice">Ariketa gelditu egin da!</string>
+    <string name="tts_media_button_register_error">Akats bat gertatu da audioaren multimedia botoia erregistratzean</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_title">Erakutsi beharreko informazioa:</string>
+    <string name="dialog_export_exporting" translation_description="The part '&#8230;' of the string is the ellipsis.">Esportatzen&#8230;</string>
+    <string name="dialog_export_preparing">Esportazioa prestatzen</string>
+    <string name="dialog_export_creating_files">Fitxategiak sortzen</string>
+    <string name="dialog_export_packaging">Paketatzen</string>
+    <string name="dialog_export_packaging_images">Irudiak paketatzen</string>
+    <string name="dialog_export_finish">Prozesua amaitu da</string>
+    <string name="dialog_export_creating_kml">KML sortzen</string>
+    <string name="dialog_export_creating_kmz">KMZ sortzen</string>
+    <string name="dialog_export_creating_gpx">GPX sortzen</string>
+    <string name="dialog_export_creating_xml">XML sortzen</string>
+    <string name="dialog_import_importing" translation_description="The part '&#8230;' of the string is the ellipsis.">Inportatzen&#8230;</string>
+    <string name="dialog_import_text" translation_description="The part '&#8230;' of the string is the ellipsis.">Ariketa(k) inportatzen. Prozesu hau burutzeko agian denbora beharko da&#8230;</string>
+    <string name="import_correctly">Ariketa(k) ongi inportatu da(dira)</string>
+    <string name="import_error">Akats bat gertatu da inportatze-prozesuan, egiaztatu jatorrizko fitxategia</string>
+    <string name="alertdialog_option_1">Ireki</string>
+    <string name="alertdialog_option_2">Editatu</string>
+    <string name="alertdialog_option_3">Esportatu</string>
+    <string name="alertdialog_option_4">Ezabatu</string>
+    <string name="alertdialog_option_5">Klonatu</string>
+    <string name="alertdialog_option_6">Erabili</string>
+    <string name="alertdialog_option_7">Partekatu</string>
+    <string name="file_format_1">GPX formatua(denbora eta abiadura)</string>
+    <string name="file_format_2">KML formatua</string>
+    <string name="file_format_3">Formato KMZ formatua(KML argazkiekin)</string>
+    <string name="shoes_listview_options_1">Lehenetsi gisa ezarri</string>
+    <string name="shoes_listview_options_2">Informazioa aldatu</string>
+    <string name="shoes_listview_options_3">Zerrendatik ezabatu</string>
+    <string name="choice_time1">Data-tarte osoa</string>
+    <string name="choice_time2">Urte hau</string>
+    <string name="choice_time3">Hilabete hau</string>
+    <string name="choice_time4">Aste hau</string>
+    <string name="choice_time5">Daten arteko mugatua</string>
+
+    <!-- Activity list header -->
+    <string name="activitylist_header_one">Jarduerarik ohikoena(k)</string>
+    <string name="activitylist_header_two">Jarduera guztiak</string>
+
+    <!-- Practice recording descriptions -->
+    <string name="practice_started">Ariketa berria hasita</string>
+    <string name="saving_practice" translation_description="The part '&#8230;' of the string is the ellipsis.
+        The '\n' is a carriage return.">Ariketa gordetzen.\n\nHonetarako denbora beharko da, itxaron&#8230;</string>
+
+    <!-- OSM -->
+    <string name="osm_requesttoken_url">http://www.openstreetmap.org/oauth/request_token</string>
+    <string name="osm_accesstoken_url">http://www.openstreetmap.org/oauth/access_token</string>
+    <string name="osm_authorize_url">http://www.openstreetmap.org/oauth/authorize</string>
+    <string name="osm_gpstrace_url">http://www.openstreetmap.org/api/0.6/gpx/create</string>
+    <string name="osm_private">Pribatua (anonimo gisa soilik partekatua, puntu ez ordenatuak)</string>
+    <string name="osm_public">Publikoa (arrasto-zerrendan ikusgai eta anonimo gisa, puntu ez ordenatuak)</string>
+    <string name="osm_trackable">Trazagarria (anonimo gisa soilik partekatua, denbora marken bidez ordenatutako puntuak)</string>
+    <string name="osm_identifiable">Identifikagarria -gomendagarria- (arrasto-zerrendan ikusgai eta identifikagarri, denbora marken bidez ordenatutako puntuak)</string>
+    <string name="osm_selected_file_to_upload">Bidaltzeko hautatutako fitxategia:</string>
+    <string name="osm_publishing">OpenStreetMap-en argitaratzen</string>
+    <string name="osm_please_wait" translation_description="The part '&#8230;' of the string is the ellipsis.">GPS arrastoa(k) igotzen. Itxaron&#8230;</string>
+    <string name="osm_sorry" translation_description="The part '&#8230;' of the string is the ellipsis.">Barkatu, fitxategia(k) ez da/dira aurkitu&#8230;</string>
+    <string name="osm_error_uploading">Igotzean akats bat gertatu da</string>
+    <string name="osm_gps_trace">GPS arrasto(eta)tik OpenStreetMap-era</string>
+    <string name="osm_complete">Amaitu da!</string>
+    <string name="osm_failure">Akatsa!</string>
+    <string name="sending_files_to_osm">Fitxategia(k) bidaltzen OSM-ra</string>
+    <string name="osm_authorization">OpenStreetMaperako baimena</string>
+    <string name="osm_gps_traces_authorization">Lehenik baimenak eman MoveOn-i GPS arrastoak OpenStreetMapera igo ahal izateko, eta gero saia zaitez berriro</string>
+    <string name="osm_authorization_form">Baimen-inprimakira joan</string>
+
+    <!-- Facebook -->
+    <string name="fb_logged_in" translation_description="The part '&#8230;' of the string is the ellipsis.">Conectado&#8230;</string>
+    <string name="fb_logged_out" translation_description="The part '&#8230;' of the string is the ellipsis.">Desconectado&#8230;</string>
+    <string name="fb_error">Error:</string>
+    <string name="fb_success">¡Éxito!</string>
+    <string name="fb_not_installed">¡Aplicación de Facebook no instalada!</string>
+
+    <!-- Interval training names -->
+    <string name="standard_interval_training">Estándar</string>
+    <string name="tabata_interval_training">Tabata</string>
+    <string name="pyramid_interval_training">Pirámide</string>
+
+    <!-- Data Base -->
+    <string name="db_open">Datu-basea sortzea edo irekitzea</string>
+    <string name="db_close">Datu-basea ixtea</string>
+    <string name="db_deleting_register">Ezabatzen erregistroa _id-rekin</string>
+    <string name="db_create_tables" translation_description="The part '&#8230;' of the string is the ellipsis.">Datu-basean beharrezko taulak sortzen&#8230;</string>
+    <string name="db_updating_from_version">Datu-basea eguneratzen bertsiotik</string>
+    <string name="db_updating_to_version">bertsiora</string>
+    <string name="db_transaction_rolled_back">Akatsa informazioa gordetzean (transakzioa lehengoratua)</string>
+    <string name="db_query_top_three_activities" translation_description="The part '&#8230;' of the string is the ellipsis.">Gehien egin diren hiru kirol ekintza hautatzen&#8230;</string>
+    <string name="db_query_getting_shoes" translation_description="Simple quotation mark + backslash is a single quotation mark.">\'shoes\'taulako zapatillak lortzen</string>
+    <string name="db_query_select_hiit_intervals" translation_description="Simple quotation mark + backslash is a single quotation mark.">\'hiit\'taulako tartekako entrenamendua hautatzen</string>
+    <string name="db_query_select_records_by_activity" translation_description="The part '&#8230;' of the string is the ellipsis.">Jardueraren araberako erregistroak hautatzen&#8230;</string>
+    <string name="db_query_select_records_by_date" translation_description="The part '&#8230;' of the string is the ellipsis.">Dataren araberako erregistroak hautatzen&#8230;</string>
+    <string name="db_query_select_records_by_activity_and_date" translation_description="The part '&#8230;' of the string is the ellipsis.">Jarduera eta dataren araberako erregistroak hautatzen&#8230;</string>
+    <string name="checking_routes" translation_description="The part '&#8230;' of the string is the ellipsis.">Ibilbideak badirela egiaztatzen&#8230;</string>
+    <string name="selecting_all_routes">Ibilbide guztiak hautatzen</string>
+    <string name="selecting_this_year_routes">Aurtengo ibilbideak hautatzen</string>
+    <string name="selecting_this_month_routes">Hilabete honetako ibilbideak hautatzen</string>
+    <string name="selecting_this_weak_routes">Aste honetako ibilbideak hautatzen</string>
+    <string name="filter_by_activity">arduera-motaren arabera hautatutak</string>
+    <string name="group_by_activities" translation_description="The part '&#8230;' of the string is the ellipsis.">jarduera-motaren arabera multzokatutak&#8230;</string>
+    <string name="routes_with_hr" translation_description="The part '&#8230;' of the string is the ellipsis.">Pulsometroarekin egindako ibilbide guztiak hautatzen&#8230;</string>
+    <string name="selecting_most_used_shoes" translation_description="The part '&#8230;' of the string is the ellipsis.">Zapatilla erabilienak hautatzen&#8230;</string>
+    <string name="selecting_most_used_shoes_in_data_range" translation_description="The part '&#8230;' of the string is the ellipsis.">Ezarritako denbora-tartean zapatilla erabilienak hautatzen&#8230;</string>
+    <string name="shoe_name" translation_description="The part '&#8230;' of the string is the ellipsis.">Zapatillaren izena hautatzen&#8230;</string>
+    <string name="summary2_hiit_query_part1">Tarteen lokalizazioak hautatzen</string>
+    <string name="summary2_hiit_query_part2">segundua(k) arteko eta</string>
+    <string name="summary2_hiit_query_part3" translation_description="The part '&#8230;' of the string is the ellipsis.">segunduak&#8230;</string>
+    <string name="getting_time_and_distance_from_row_of_table_routes" translation_description="Simple quotation mark + backslash is a single quotation mark.">Erregistroko \'routes\' taulatik denbora eta distantzia lortzen _id-rekin</string>
+    <string name="routes_counter_query" translation_description="Simple quotation mark + backslash is a single quotation mark.">\'routes\' taularen erregistroak kontatzen</string>
+    <string name="getting_shoe_with_id">Zapatilla lortzen_id-rekin</string>
+    <string name="from_shoes_table" translation_description="Simple quotation mark + backslash is a single quotation mark.">\'shoes\'taulatik</string>
+    <string name="getting_route_with_id">Ibilbidea lortzen_id-rekin</string>
+
+    <!-- App strings -->
+    <string name="dash">-</string>
+    <string name="plus">+</string>
+    <string name="send_to">Partekatu</string>
+    <string name="share_with">honen bidez:</string>
+    <string name="in" translation_description="Leave empty if there is no preposition 'in' in this language"></string>
+    <string name="and" translation_description="Leave empty if there is no conjunction 'and' in this language">eta</string>
+    <string name="basic_practice">Oinarrizko ariketa</string>
+    <string name="basic_practice_details">Erregistra ezazu ariketa arrunt bat</string>
+    <string name="objetive">Konfigura ezazu helburu bat</string>
+    <string name="objetive_details">Distantzia, denbora edo kaloria helburu</string>
+    <string name="win_yourself">Lehia zaitez beste ariketa baten aurka</string>
+    <string name="win_yourself_details">Hautatu ariketa bat eta gainditu</string>
+    <string name="hiit">Tartekako entrenamendua</string>
+    <string name="hiit_details">Erabil ezazu aurrez definitutako bat edo sortu zeurea</string>
+    <string name="confirm_action">Ekintza baieztatu:</string>
+    <string name="select_action">Ekintza aukeratu:</string>
+    <string name="select_format">Formatua aukeratu:</string>
+    <string name="discard_and_exit">Jarduneko ariketa utzi eta aplikaziotik atera nahi duzu?</string>
+    <string name="exit" translation_description="Simple quotation mark + backslash is a single quotation mark.">Berriz ere \'Itzuli\' botoia sakatu irtetzeko</string>
+    <string name="hiit_type_description1">Leheneratzea</string>
+    <string name="hiit_type_description2">Behe mailako intentsitatea</string>
+    <string name="hiit_type_description3">Erdi mailako intentsitatea</string>
+    <string name="hiit_type_description4">Goi mailako intentsitatea</string>
+    <string name="hiit_create_interval_error">Ezin da 0 minutu eta 0 segunduko tartea sortu</string>
+    <string name="required_name">Ariketa izena behar du</string>
+    <string name="number_of_rounds_error">Ez duzu sartu txanda-kopurua edo, bestela, zehaztutako balioa ez da baliozko zenbakia</string>
+    <string name="hiit_preparation_minutes_error">Ez dituzu prestaketa-minutuak sartu, edo, bestela, zehaztutako balioa ez da baliozko zenbakia</string>
+    <string name="hiit_preparation_seconds_error">Ez dituzu prestaketa-segunduak sartu, edo, bestela, zehaztutako balioa ez da baliozko zenbakia</string>
+    <string name="hiit_cooldown_minutes_error">Ez dituzu suspertze-minutuak sartu, edo, bestela, zehaztutako balioa ez da baliozko zenbakia</string>
+    <string name="hiit_cooldown_seconds_error">Ez dituzu suspertze-segunduak sartu, edo, bestela, zehaztutako balioa ez da baliozko zenbakia</string>
+    <string name="hiit_missing_intervals">Ez duzu tarterik sartu</string>
+    <string name="none_text">Bat ere ez</string>
+    <string name="minutes_value_error">Akats bat dago minutuen laukian. Zero baino txikiagoak dira edo berrogeita hemeretzitik gorakoak.</string>
+    <string name="seconds_value_error">Akats bat dago segunduen laukian. Zero baino txikiagoak dira edo berrogeita hemeretzitik gorakoak.</string>
+    <string name="data">Datu </string>
+    <string name="incorrect_format">formatu desegokia du</string>
+    <string name="hours">orduak</string>
+    <string name="minute">minutua</string>
+    <string name="minutes">minutuak</string>
+    <string name="second">segundua</string>
+    <string name="seconds">segunduak</string>
+    <string name="interrupt">Gelditu</string>
+    <string name="restart">Berrezarri</string>
+    <string name="exporting_data">Aplikazioa babesteko informazioa esportatzen</string>
+    <string name="export_canceled">Esportazioa bertan behera utzi da</string>
+    <string name="importing_data">Aplikazioa babesteko Datu-basea inportatzen</string>
+    <string name="import_canceled">Inportazioa bertan behera utzi da</string>
+    <string name="practice_save_in" translation_description="Simple quotation mark + backslash is a single quotation mark.">Ariketa(k) salbatua(k): \'</string>
+    <string name="actual_interval_of">Oraingo tartea</string>
+    <string name="next_interval_of">Hurrengo tartea</string>
+    <string name="warm_up">beroketa</string>
+    <string name="cool_down">luzaketak</string>
+    <string name="until">denbora honetan zehar</string>
+    <string name="cooldown_interval">Hurrengo luzaketa tartea denbora honetan zehar</string>
+    <string name="end_of_interval">Tartea amaitu da</string>
+    <string name="round_or_rounds">txanda(k)</string>
+    <string name="intervals">tarteak</string>
+    <string name="warm_up_description">prestaketa</string>
+    <string name="at_least_one_year" translation_description="The part '&#8230;' of the string is the ellipsis.">Ez da urtebete ere igaro jaiotegunetik. Ezin da kalkulua egin&#8230;</string>
+    <string name="hr_required" translation_description="The part '&#8230;' of the string is the ellipsis.">Derrigorrezkoa da BF atsedenean&#8230;</string>
+    <string name="in_zone1" translation_description="The part '&#8230;' of the string is the ellipsis.">1 gunean&#8230;</string>
+    <string name="in_zone2" translation_description="The part '&#8230;' of the string is the ellipsis.">2 gunean&#8230;</string>
+    <string name="in_zone3" translation_description="The part '&#8230;' of the string is the ellipsis.">3 gunean&#8230;</string>
+    <string name="in_zone4" translation_description="The part '&#8230;' of the string is the ellipsis.">4 gunean&#8230;</string>
+    <string name="in_zone5" translation_description="The part '&#8230;' of the string is the ellipsis.">5 gunean&#8230;</string>
+    <string name="resting_hr_missing" translation_description="The part '&#8230;' of the string is the ellipsis.">BF atsedenean falta da&#8230;</string>
+    <string name="min_hr_missing">BF minimoa falta da</string>
+    <string name="max_hr_missing">BF maximoa falta da</string>
+    <string name="backup_completed_successfully">Babesa ongi gauzatu da</string>
+    <string name="backup_error" translation_description="The part '&#8230;' of the string is the ellipsis.">Akatsa gertatu da eta prozesua gaizki amaitu da&#8230;</string>
+    <string name="backup_in">Babestu informazioa hemen</string>
+    <string name="btle_not_supported">Gailu honek ez du onartzen BT LE teknologia edo, bestela, Androideko bertsioa Jelly Bean (4.3 bertsioa) baino maila baxuagokoa da</string>
+    <string name="ant_plus_not_supported">Gailu honek ez du onartzen ANT+ teknologia</string>
+    <string name="backup_title">Segurtasun babesa</string>
+    <string name="backup_msg">Hasiera eman nahi diozu segurtasuna babesteko prozesuari?</string>
+    <string name="yes">Bai</string>
+    <string name="no">Ez</string>
+    <string name="backup_canceled">Segurtasun babesa bertan behera utzi da</string>
+    <string name="wait_until_data_is_exported" translation_description="The part '&#8230;' of the string is the ellipsis.">Babes-informazioa esportatzen. Itxaron&#8230;</string>
+    <string name="user_has_returned">Erabiltzaile ez onartua</string>
+    <string name="practice_name_missing">Gordetzeko prozesua egikaritu aurretik, ariketaren izena adierazi behar duzu</string>
+    <string name="practice_cancel_saving_process">Ariketa gordetzea bertan behera utzi nahi duzu?</string>
+    <string name="start_date">Hasierako data:</string>
+    <string name="end_date">Amaierako data:</string>
+    <string name="end_date_greater_than_start_date" translation_description="The part '&#8230;' of the string is the ellipsis.">Amaierako data hasierakoa baino handiagoa izan behar da&#8230;</string>
+    <string name="route_start">Ariketako hasiera</string>
+    <string name="route_pause">Etena ariketaren ibilbidean</string>
+    <string name="route_continue">Ariketaren ibilbidearekin jarraitzen</string>
+    <string name="route_stop">Amaitu da ariketa</string>
+    <string name="continued">Ariketa jardunean</string>
+    <string name="pause">Ariketa etenda</string>
+    <string name="end">Amaiera</string>
+    <string name="rides">ibilbideak</string>
+    <string name="original_route_image">Jatorrizko ibilbideak irudi bat dauka puntu honetan</string>
+    <string name="route_in_progress" translation_description="The part '&#8230;' of the string is the ellipsis.">Amaitu jarduneko ariketa entrenamendu honi buruzko informazioa lortzeko&#8230;</string>
+    <string name="end_route_before">Lehendabizi martxan dagoen entrenamendua geldiarazi</string>
+    <string name="practices">ariketa(k)</string>
+    <string name="beats_per_minute">tm</string>
+    <string name="revolutions_per_minute">bm</string>
+    <string name="pictures">argazkia(k)</string>
+    <string name="no_internet" translation_description="The part '&#8230;' of the string is the ellipsis.">Interneterako konexio aktiborik gabe&#8230;</string>
+    <string name="backup_restored_successfully">Babesa ongi berrezarri da</string>
+    <string name="backup_restored_unsuccessfully">Berrezartze prozesuan arazoren bat gertatu da :-(</string>
+    <string name="objetive_type">Helburu-mota</string>
+    <string name="round_short_text">rond.</string>
+    <string name="interval_short_text">tart.</string>
+    <string name="practice_completed">entrenamendua amaitu da!</string>
+    <string name="graph_time_and_speed_no_data">Ariketa honetan ez dago denbora eta abiadura daturik</string>
+    <string name="graph_time_and_altitude_no_data">Ariketa honetan ez dago denbora eta altitude daturik</string>
+    <string name="hr_zones_label">BF guneak</string>
+    <string name="hr_resting">Atsedena</string>
+    <string name="hr_level1">Oso suabe</string>
+    <string name="hr_level2">Suabe</string>
+    <string name="hr_level3">Neurrikoa</string>
+    <string name="hr_level4">Bizia</string>
+    <string name="hr_maximum">Maximoa</string>
+    <string name="of_time">denborarenak</string>
+    <string name="in_restring">atsedenean</string>
+    <string name="in_hr_range1">tarte oso suabean</string>
+    <string name="in_hr_range2">tarte suabean (koipeak erretzekoa)</string>
+    <string name="in_hr_range3">neurriko tartean (aerobikoa)</string>
+    <string name="in_hr_range4">tarte bizian (anaerobikoa)</string>
+    <string name="in_maximum_effort">tarte maximoan</string>
+    <string name="beats">Taupadak</string>
+    <string name="filter_activities">Ekintzak filtratu</string>
+    <string name="stop_running_practice_first">Lehendabizi martxan dagoen entrenamendua gelditu</string>
+    <string name="stop_running_practice_to_choose_new_objetive">Jarduneko ariketa amaitu beste helburu bat aukeratzeko</string>
+    <string name="app_locked">Klikatu kandaduaren gainean aplikazioa desblokeatzeko</string>
+    <string name="exif_tags_are_not_available">Exif etiketak ez daude eskura!</string>
+    <string name="latitude">Latitudea:</string>
+    <string name="longitude">Longitudea:</string>
+    <string name="tts_starting" translation_description="The part '&#8230;' of the string is the ellipsis.">TextToSpeech motorra hasierazten&#8230;</string>
+    <string name="tts_started">TextToSpeech hasieratuta</string>
+    <string name="tts_error">Ezin izan da TextToSpeech motorra hasieratu</string>
+    <string name="tts_stopping" translation_description="The part '&#8230;' of the string is the ellipsis.">TextToSpeech motorra geldiarazten&#8230;</string>
+    <string name="tts_stopped">TextToSpeech geldituta</string>
+    <string name="tts_language_is_not_available">Ahots bidezko laguntzailea ez dago eskura</string>
+    <string name="tts_engine_says">Honela dio TextToSpeech motorrak:</string>
+    <string name="add_new_shoe">Gehitu beste zapatilla bat</string>
+    <string name="add_new_shoe_info_missing">Gogoratu bi testu-eremuak bete behar direla zapatilla gehitu ahal izateko</string>
+    <string name="confirm_import_action">Inportazioa baieztatu</string>
+    <string name="restore_backup_confirmation">Segurtasun-babes bat detektatu da. Leheneratu nahi duzu?</string>
+    <string name="wait_restoring_backup" translation_description="The part '&#8230;' of the string is the ellipsis.">Informazioa azken babesetik inportatzen. Itxaron&#8230;</string>
+    <string name="delete_confirm_action">Ezabaketa baieztatu:</string>
+    <string name="delete_practice_confirm_action">Ziur zaude ariketa ezabatu nahi duzula</string>
+    <string name="delete_shoe_confirm_action">Ziur zaude zapatilla ezabatu nahi duzula</string>
+    <string name="error_deleting_default_shoe">Zapatilla hau ezabatu aurretik, beste bat ezarri lehenetsi gisa</string>
+    <string name="edit_shoe">Zapatilla editatu</string>
+    <string name="practices_to_import">Inportatzeko ariketa(k):</string>
+    <string name="practices_to_export">Exportatzeko ariketa(k):</string>
+    <string name="files_no_selected" translation_description="The part '&#8230;' of the string is the ellipsis.">Ez dago fitxategirik aukeratuta&#8230;</string>
+    <string name="activity_to_apply">Aplikatzeko aktibitatea:</string>
+    <string name="date_time_wrong_values">Data eta/edo orduari buruzko karaktere-katea(k) ez da(dira) zuzena(k)</string>
+    <string name="no_files_to_import_in_directory">Direktorioan ez dago inportatzeko fitxategirik</string>
+    <string name="with_moveon">MoveOn Sports Tracker-ekin Androiderako</string>
+    <string name="calories_burned">erretako kaloriak</string>
+    <string name="click_to_view_or_download_gps_trace">Klikatu hemen nire ibilbidea ikusteko edo jaisteko:</string>
+    <string name="practices_to_share">Partekatzeko ariketa(k):</string>
+
+    <!-- About -->
+    <string name="about_license">Baimena:</string>
+    <string name="about_license_description" translation_description="The '\n' is a carriage return.">MoveOn Sports Tracker is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nMoveOn Sports Tracker is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with MoveOn Sports Tracker. If not, see http://www.gnu.org/licenses/.</string>
+    <string name="about_version">Bertsioa:</string>
+    <string name="about_author_title">Egilea:</string>
+    <string name="about_author" translation_description="The '\n' is a carriage return.">Twitter: https://twitter.com/scintero\nWebgune pertsonala: www.saulcintero.com</string>
+    <string name="about_project_title">Proiektua:</string>
+    <string name="about_project" translation_description="The '\n' is a carriage return.">Iturburu-kodea: https://github.com/scintero/moveon\nPosta elektronikoa: contact@moveontracker.org\nWebgune ofiziala: www.moveontracker.org\nWeb administratzailea: https://twitter.com/socialangelr</string>
+
+</resources>

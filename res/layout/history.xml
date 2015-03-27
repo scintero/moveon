@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/shadow" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/history_item_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:maxLength="29"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_bigger"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/history_item_nine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/history_item_one"
+                    android:layout_alignBottom="@+id/history_item_one"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/history_item_one"
+                    android:ellipsize="end"
+                    android:maxLength="29"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_large" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:baselineAligned="false" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="25"
+                    android:gravity="bottom" >
+
+                    <ImageView
+                        android:id="@+id/history_image_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/sessions" />
+
+                    <TextView
+                        android:id="@+id/history_item_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/history_image_one"
+                        android:layout_marginBottom="1dp"
+                        android:layout_toRightOf="@+id/history_image_one"
+                        android:ellipsize="end"
+                        android:maxLength="29"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_small"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/history_item_seven"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="3dp"
+                        android:ellipsize="end"
+                        android:maxLength="29"
+                        android:singleLine="true"
+                        android:text="@string/history_sessions"
+                        android:textColor="#ff7c00"
+                        android:textSize="@dimen/text_size_micro"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="25"
+                    android:gravity="bottom" >
+
+                    <ImageView
+                        android:id="@+id/history_image_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/time" />
+
+                    <TextView
+                        android:id="@+id/history_item_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/history_image_two"
+                        android:layout_marginBottom="1dp"
+                        android:layout_toRightOf="@+id/history_image_two"
+                        android:ellipsize="end"
+                        android:maxLength="29"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_small"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/history_item_eight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="4dp"
+                        android:ellipsize="end"
+                        android:maxLength="29"
+                        android:singleLine="true"
+                        android:text="@string/history_duration"
+                        android:textColor="#ff7c00"
+                        android:textSize="@dimen/text_size_micro"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="25"
+                    android:gravity="bottom" >
+
+                    <ImageView
+                        android:id="@+id/history_image_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/calories_big" />
+
+                    <TextView
+                        android:id="@+id/history_item_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/history_image_three"
+                        android:layout_marginBottom="1dp"
+                        android:layout_toRightOf="@+id/history_image_three"
+                        android:ellipsize="end"
+                        android:maxLength="29"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_small"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/history_item_ten"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="7dp"
+                        android:ellipsize="end"
+                        android:maxLength="29"
+                        android:singleLine="true"
+                        android:text="@string/history_calories"
+                        android:textColor="#ff7c00"
+                        android:textSize="@dimen/text_size_micro"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/info_divider"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#aeaeae" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/list_routes"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="2dp"
+                android:cacheColorHint="#00000000"
+                android:choiceMode="singleChoice"
+                android:fadingEdge="none" />
+
+            <TextView
+                android:id="@+id/history_hello_item"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/message_gradient_rounded_corner"
+                android:ellipsize="none"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/history_wellcome"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_large"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/player_bar_height"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/info_divider1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#aeaeae" />
+
+            <ImageView
+                android:id="@+id/info_divider2"
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#aeaeae" />
+
+            <ImageView
+                android:id="@+id/info_divider3"
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#aeaeae" />
+
+            <ImageView
+                android:id="@+id/info_divider4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="#aeaeae" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <com.saulcintero.moveon.ui.widgets.BottomActionBarItem
+                    android:id="@+id/history_action_bar_item_one"
+                    style="@style/BottomActionBarItem"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/create"
+                    android:src="@drawable/create" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <com.saulcintero.moveon.ui.widgets.BottomActionBarItem
+                    android:id="@+id/history_action_bar_item_two"
+                    style="@style/BottomActionBarItem"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/add"
+                    android:src="@drawable/add" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+
+                <com.saulcintero.moveon.ui.widgets.BottomActionBarItem
+                    android:id="@+id/history_action_bar_item_three"
+                    style="@style/BottomActionBarItem"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/export"
+                    android:src="@drawable/export" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+
+                <com.saulcintero.moveon.ui.widgets.BottomActionBarItem
+                    android:id="@+id/history_action_bar_item_four"
+                    style="@style/BottomActionBarItem"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/filter"
+                    android:src="@drawable/search" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+
+                <com.saulcintero.moveon.ui.widgets.BottomActionBarItem
+                    android:id="@+id/history_action_bar_item_five"
+                    style="@style/BottomActionBarItem"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/share"
+                    android:src="@drawable/share" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

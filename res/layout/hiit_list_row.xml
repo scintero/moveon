@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="55dp"
+    android:background="@drawable/holo_selector_type1"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/hiit_name"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="2"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:lines="1"
+            android:maxLength="29"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hiit_total_time"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="4"
+            android:ellipsize="marquee"
+            android:gravity="center|right"
+            android:lines="1"
+            android:maxLength="29"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/hiit_description"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="2"
+            android:ellipsize="marquee"
+            android:gravity="top|left"
+            android:lines="1"
+            android:maxLength="45"
+            android:maxLines="1"
+            android:textColor="@drawable/textview_selector_type1"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+</LinearLayout>

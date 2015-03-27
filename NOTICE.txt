@@ -1,0 +1,62 @@
+MoveOn Sports Tracker is an open-source program for Android
+
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+ 
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker; If not, see <http://www.gnu.org/licenses/>.
+
+MoveOn Sports Tracker uses several 3rd party libraries. The libraries and 
+licenses are listed below:
+
+achartengine-1.1.0.jar
+License: Apache License 2.0
+Project URL: https://code.google.com/p/achartengine/
+
+antlib.jar
+License: Apache License Version 2.0
+
+commons-lang3-3.3.2.jar
+License: Apache License Version 2.0
+Project URL: http://jakarta.apache.org/commons/lang/
+
+guava-jdk5-13.0.jar
+License: Apache License Version 2.0
+Project URL: https://github.com/google/guava
+
+httpmime-4.2.1.jar
+License: Apache License Version 2.0
+
+osmdroid-android-4.1.jar
+License: Apache License 2.0
+Project URL: http://code.google.com/p/osmdroid/
+
+protobuf-java-2.3.0-lite.jar
+License: BSD 3-Clause ("BSD New" or "BSD Simplified")
+Project URL: http://code.google.com/p/protobuf
+
+signpost-commonshttp4-1.2.1.2.jar
+License: Apache License Version 2.0
+
+signpost-core-1.2.1.2.jar
+License: Apache License Version 2.0
+Project URL: http://code.google.com/p/oauth-signpost
+
+slf4j-android-1.5.8.jar
+License: The MIT License (MIT)
+Project URL: http://www.slf4j.org/android/
+
+zip4j_1.3.1.jar
+License: Apache License Version 2.0
+Project URL: http://www.lingala.net/zip4j/

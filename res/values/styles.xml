@@ -1,0 +1,128 @@
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+
+    <style name="AppTheme" parent="@android:style/Theme.Holo.NoActionBar" />
+
+    <!-- Custom tabs -->
+    <style name="Tabs">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/bottom_action_bar_height</item>
+        <item name="android:background">@drawable/tab</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">@dimen/tab_padding_top_bottom</item>
+        <item name="android:paddingLeft">@dimen/tab_padding_left_right</item>
+        <item name="android:paddingRight">@dimen/tab_padding_left_right</item>
+        <item name="android:paddingTop">@dimen/tab_padding_top_bottom</item>
+        <item name="android:textColor">@color/tab_text_color</item>
+        <item name="android:textSize">@dimen/text_size_micro</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:selectAllOnFocus">false</item>
+    </style>
+
+    <!-- ImageButton in the audio player controls -->
+    <style name="Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/holo_selector_type1</item>
+    </style>
+
+    <!-- List separator with a blue underline -->
+    <style name="SeparatorTextViewStyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/list_separator_min_height</item>
+        <item name="android:background">@drawable/list_section_divider_holo_custom</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/holo_gray</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">@dimen/list_separator_padding_left_right</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- ImageButton in practice activity -->
+    <style name="Item">
+        <item name="android:layout_width">@dimen/bottom_action_bar_item_width</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingLeft">@dimen/bottom_action_bar_item_padding_left_right</item>
+        <item name="android:paddingRight">@dimen/bottom_action_bar_item_padding_left_right</item>
+        <item name="android:background">@drawable/holo_selector_type1</item>
+        <item name="android:gravity">center|end</item>
+    </style>
+
+    <!-- ImageButton in the bottom bar -->
+    <style name="BottomActionBarItem">
+        <item name="android:layout_width">@dimen/bottom_action_bar_item_width</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingLeft">@dimen/bottom_action_bar_item_padding_left_right</item>
+        <item name="android:paddingRight">@dimen/bottom_action_bar_item_padding_left_right</item>
+        <item name="android:background">@drawable/holo_selector_type1</item>
+        <item name="android:gravity">center|end</item>
+    </style>
+
+    <!-- About -->
+    <style name="HeaderText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#b5b5b5</item>
+    </style>
+
+    <style name="DescriptionText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextSmall" parent="@style/DescriptionText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextMedium" parent="@style/HeaderText">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextLarge" parent="@style/HeaderText">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextLarge.WithIcon">
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColor">#b5b5b5</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AboutValue" parent="@style/TextSmall">
+        <item name="android:paddingLeft">48dp</item>
+    </style>
+
+    <style name="ScrollView">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:scrollbarStyle">outsideInset</item>
+    </style>
+
+</resources>

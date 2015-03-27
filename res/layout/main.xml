@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+    
+    <Chronometer
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.saulcintero.moveon.ui.widgets.Item
+        android:id="@+id/PracticeItem01"
+        style="@style/Button"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_gradient_rounded_corner_states"
+        android:contentDescription="@string/start" />
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom" >
+        
+        <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/shadow" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_root"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/player_button_container_padding" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom" >
+
+                    <com.saulcintero.moveon.ui.widgets.Item
+                        android:id="@+id/practice_gps_image"
+                        style="@style/Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:contentDescription="@string/gps"
+                        android:src="@drawable/gps_off" />
+
+                    <TextView
+                        android:id="@+id/practice_gps_item"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/practice_gps_image"
+                        android:ellipsize="end"
+                        android:maxLength="39"
+                        android:singleLine="true"
+                        android:text="@string/gps_off"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_small" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="195dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:gravity="bottom" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/practice_display1_image"
+                            style="@style/Item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:contentDescription="@string/display_type_one" />
+
+                        <TextView
+                            android:id="@+id/practice_display1_item_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_bigger"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/practice_display1_item_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/practice_display1_item_one"
+                            android:layout_alignBottom="@+id/practice_display1_item_one"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@+id/practice_display1_item_one"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <ImageView
+                            android:id="@+id/practice_display1_quick_context_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/dropdown_ic_arrow_normal_holo_light" />
+
+                        <ImageView
+                            android:id="@+id/info_divider1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="5dp"
+                            android:background="#aeaeae" />
+
+                        <ImageView
+                            android:id="@+id/practice_display1_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/practice_display1_quick_context_tip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:id="@+id/practice_display1_item_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/info_divider1"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/practice_display1_icon"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/text_size_medium" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:gravity="bottom" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/practice_display2_image"
+                            style="@style/BottomActionBarItem"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/display_type_one" />
+
+                        <TextView
+                            android:id="@+id/practice_display2_item_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_bigger"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/practice_display2_item_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/practice_display2_item_one"
+                            android:layout_alignBottom="@+id/practice_display2_item_one"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@+id/practice_display2_item_one"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <ImageView
+                            android:id="@+id/practice_display2_quick_context_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/dropdown_ic_arrow_normal_holo_light" />
+
+                        <ImageView
+                            android:id="@+id/info_divider2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="#aeaeae" />
+
+                        <ImageView
+                            android:id="@+id/practice_display2_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/practice_display2_quick_context_tip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:id="@+id/practice_display2_item_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/practice_display2_icon"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/text_size_medium" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:baselineAligned="false" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:gravity="bottom" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/practice_display3_image"
+                            style="@style/BottomActionBarItem"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:contentDescription="@string/display_type_one" />
+
+                        <TextView
+                            android:id="@+id/practice_display3_item_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_bigger"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/practice_display3_item_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/practice_display3_item_one"
+                            android:layout_alignBottom="@+id/practice_display3_item_one"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@+id/practice_display3_item_one"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <ImageView
+                            android:id="@+id/practice_display3_quick_context_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/dropdown_ic_arrow_normal_holo_light" />
+
+                        <ImageView
+                            android:id="@+id/info_divider3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="5dp"
+                            android:background="#aeaeae" />
+
+                        <ImageView
+                            android:id="@+id/practice_display3_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/practice_display3_quick_context_tip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:id="@+id/practice_display3_item_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/info_divider3"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/practice_display3_icon"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/text_size_medium" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:gravity="bottom" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/practice_display4_image"
+                            style="@style/BottomActionBarItem"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/display_type_one" />
+
+                        <TextView
+                            android:id="@+id/practice_display4_item_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_bigger"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/practice_display4_item_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/practice_display4_item_one"
+                            android:layout_alignBottom="@+id/practice_display4_item_one"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@+id/practice_display4_item_one"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <ImageView
+                            android:id="@+id/practice_display4_quick_context_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/dropdown_ic_arrow_normal_holo_light" />
+
+                        <ImageView
+                            android:id="@+id/info_divider4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="#aeaeae" />
+
+                        <ImageView
+                            android:id="@+id/practice_display4_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/practice_display4_quick_context_tip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:id="@+id/practice_display4_item_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/practice_display4_icon"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/text_size_medium" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:baselineAligned="false" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:baselineAligned="false"
+                        android:gravity="bottom" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/practice_display5_image"
+                            style="@style/BottomActionBarItem"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:contentDescription="@string/display_type_two" />
+
+                        <ImageView
+                            android:id="@+id/practice_display5_item_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/practice_display5_item_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/practice_display5_item_two"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignRight="@+id/practice_display5_image"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/practice_display5_item_three"
+                            android:ellipsize="marquee"
+                            android:gravity="center|start"
+                            android:lines="2"
+                            android:maxLength="33"
+                            android:maxLines="2"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_medium" />
+
+                        <TextView
+                            android:id="@+id/practice_display5_item_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/text_size_medium" />
+
+                        <ImageView
+                            android:id="@+id/practice_display5_quick_context_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/dropdown_ic_arrow_normal_holo_light" />
+
+                        <ImageView
+                            android:id="@+id/info_divider5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="5dp"
+                            android:background="#aeaeae" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:gravity="bottom" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/practice_display6_image"
+                            style="@style/BottomActionBarItem"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/display_type_three" />
+
+                        <TextView
+                            android:id="@+id/practice_display6_item_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:text="@string/activity"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/text_size_medium" />
+
+                        <ImageView
+                            android:id="@+id/practice_display6_quick_context_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/dropdown_ic_arrow_normal_holo_light" />
+
+                        <ImageView
+                            android:id="@+id/info_divider6"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="#aeaeae" />
+
+                        <ImageView
+                            android:id="@+id/practice_display6_item_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/practice_display6_item_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/practice_display6_item_two"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignRight="@+id/practice_display6_image"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/practice_display6_item_three"
+                            android:ellipsize="marquee"
+                            android:gravity="center|start"
+                            android:lines="2"
+                            android:maxLength="29"
+                            android:maxLines="2"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_medium" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="3dp"
+                    android:background="@android:color/transparent" >
+
+                    <ImageView
+                        android:id="@+id/info_divider7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="#aeaeae" />
+
+                    <ImageView
+                        android:id="@+id/info_divider8"
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="#aeaeae" />
+
+                    <org.osmdroid.views.MapView
+                        android:id="@+id/practice_mapview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="4dp" />
+
+                    <ImageView
+                        android:id="@+id/info_divider9"
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="#aeaeae" />
+
+                    <ImageView
+                        android:id="@+id/info_divider10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#aeaeae" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/practice_mapview"
+                        android:layout_alignRight="@+id/practice_mapview"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/gradient_background" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/practice_mapview_fullscreen"
+                            style="@style/BottomActionBarItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/mapview_full_screen"
+                            android:src="@drawable/full_screen" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/practice_mapview"
+                        android:layout_alignLeft="@+id/practice_mapview"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:background="@drawable/gradient_background" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/practice_mapview_followlocation"
+                            style="@style/BottomActionBarItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/mapview_follow_location"
+                            android:src="@drawable/gps" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/player_bar_height"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <ImageView
+                        android:id="@+id/info_divider11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="#aeaeae" />
+
+                    <ImageView
+                        android:id="@+id/info_divider12"
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="#aeaeae" />
+
+                    <ImageView
+                        android:id="@+id/info_divider13"
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="#aeaeae" />
+
+                    <ImageView
+                        android:id="@+id/info_divider14"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#aeaeae" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/main_action_bar_item_one"
+                            style="@style/BottomActionBarItem"
+                            android:layout_height="42dp"
+                            android:contentDescription="@string/voice_coach"
+                            android:src="@drawable/coach" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/main_action_bar_item_three"
+                            style="@style/BottomActionBarItem"
+                            android:layout_height="42dp"
+                            android:contentDescription="@string/camera"
+                            android:src="@drawable/camera" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/main_action_bar_item_two"
+                            style="@style/BottomActionBarItem"
+                            android:layout_height="42dp"
+                            android:contentDescription="@string/padlock"
+                            android:src="@drawable/padlock" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/main_action_bar_item_four"
+                            style="@style/BottomActionBarItem"
+                            android:layout_height="42dp"
+                            android:contentDescription="@string/music"
+                            android:src="@drawable/music" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/main_action_bar_settings"
+                            style="@style/BottomActionBarItem"
+                            android:layout_height="42dp"
+                            android:contentDescription="@string/settings"
+                            android:src="@drawable/settings" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/player_bar_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <com.saulcintero.moveon.ui.widgets.Item
+                            android:id="@+id/practice_start_image"
+                            style="@style/Button"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/button_gradient_rounded_corner_states"
+                            android:contentDescription="@string/start"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/practice_start_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="end"
+                            android:maxLength="29"
+                            android:singleLine="true"
+                            android:text="@string/start_activity"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:baselineAligned="false" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="50" >
+
+                            <com.saulcintero.moveon.ui.widgets.Item
+                                android:id="@+id/practice_pauseresume_image"
+                                style="@style/Button"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginRight="2.5dp"
+                                android:background="@drawable/button_gradient_rounded_corner_states"
+                                android:contentDescription="@string/play_label"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/practice_pauseresume_item"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="2.5dp"
+                                android:ellipsize="end"
+                                android:maxLength="29"
+                                android:singleLine="true"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_size_medium"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="50" >
+
+                            <com.saulcintero.moveon.ui.widgets.Item
+                                android:id="@+id/practice_stop_image"
+                                style="@style/Button"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="2.5dp"
+                                android:background="@drawable/button_gradient_rounded_corner_states"
+                                android:contentDescription="@string/stop_label"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/practice_stop_item"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="2.5dp"
+                                android:ellipsize="end"
+                                android:maxLength="29"
+                                android:singleLine="true"
+                                android:text="@string/stop"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_size_medium"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

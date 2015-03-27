@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015-present Saul Cintero <http://www.saulcintero.com>.
+
+This file is part of MoveOn Sports Tracker.
+
+MoveOn Sports Tracker is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MoveOn Sports Tracker is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceScreen
+        android:icon="@drawable/settings"
+        android:key="general_settings"
+        android:summary="@string/general_settings_details"
+        android:title="@string/general_settings_title" >
+        <PreferenceCategory android:title="@string/general_settings_title" >
+            <com.saulcintero.moveon.preferences.UnitPreference
+                android:defaultValue="@string/long_unit1"
+                android:dialogTitle="@string/units_setting_title"
+                android:entries="@array/units_preference"
+                android:entryValues="@array/units_preference_values"
+                android:key="units"
+                android:summary="@string/units_setting_details"
+                android:title="@string/units_setting" />
+
+            <ListPreference
+                android:defaultValue="0"
+                android:dialogTitle="@string/countdown_title"
+                android:entries="@array/general_countdown_entries"
+                android:entryValues="@array/general_countdown_values"
+                android:key="countdown"
+                android:summary="@string/countdown_summary"
+                android:title="@string/countdown_title" />
+
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="lock_app"
+                android:summary="@string/lock_summary"
+                android:title="@string/lock_title" />
+
+            <ListPreference
+                android:defaultValue="0"
+                android:dialogTitle="@string/auto_pause_setting_title"
+                android:entries="@array/auto_pause_entries"
+                android:entryValues="@array/auto_pause_values"
+                android:key="auto_pause"
+                android:summary="@string/auto_pause_setting_details"
+                android:title="@string/auto_pause_setting_title" />
+            <ListPreference
+                android:defaultValue="10"
+                android:dialogTitle="@string/sensitivity_settings_title"
+                android:entries="@array/sensitivity_level_entries"
+                android:entryValues="@array/sensitivity_level_values"
+                android:key="sensitivity_level"
+                android:summary="@string/sensitivity_details"
+                android:title="@string/sensitivity_title" />
+            <ListPreference
+                android:defaultValue="0"
+                android:dialogTitle="@string/map_tile_settings_title"
+                android:entries="@array/map_tile_type_entries"
+                android:entryValues="@array/map_tile_type_values"
+                android:key="map_tile_type"
+                android:summary="@string/map_tile_details"
+                android:title="@string/map_tile_title" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/person"
+        android:key="user_menu"
+        android:summary="@string/user_setting_details"
+        android:title="@string/user_setting" >
+        <PreferenceCategory android:title="@string/user_setting" >
+            <ListPreference
+                android:defaultValue="M"
+                android:dialogTitle="@string/gender_setting_title"
+                android:entries="@array/gender_preference"
+                android:entryValues="@array/gender_preference_values"
+                android:key="gender"
+                android:summary="@string/necessary_to_calculate_calories"
+                android:title="@string/gender_setting" />
+
+            <com.saulcintero.moveon.preferences.BodyWeightPreference
+                android:defaultValue="75.0"
+                android:dialogTitle="@string/body_weight_setting_title"
+                android:key="body_weight"
+                android:summary="@string/necessary_to_calculate_calories"
+                android:title="@string/body_weight_setting" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/karvonen_setting" >
+            <PreferenceScreen
+                android:key="hr_settings"
+                android:summary="@string/karvonen_setting_details"
+                android:title="@string/karvonen_setting_title" >
+                <intent
+                    android:action="android.intent.action.KARVONEN"
+                    android:targetClass="com.saulcintero.moveon.Karvonen"
+                    android:targetPackage="com.saulcintero.moveon" />
+            </PreferenceScreen>
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/shoes_setting_title" >
+            <PreferenceScreen
+                android:key="shoe_manager"
+                android:summary="@string/shoes_setting_details"
+                android:title="@string/shoes_setting" >
+                <intent
+                    android:action="android.intent.action.SHOES"
+                    android:targetClass="com.saulcintero.moveon.Shoes"
+                    android:targetPackage="com.saulcintero.moveon" />
+            </PreferenceScreen>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <ListPreference
+        android:defaultValue="run_in_background"
+        android:dialogTitle="@string/screen_settings_title"
+        android:entries="@array/operation_level_preference"
+        android:entryValues="@array/operation_level_preference_values"
+        android:icon="@drawable/screen"
+        android:key="operation_level"
+        android:summary="@string/operation_level_setting_details"
+        android:title="@string/screen_settings_title" />
+
+    <PreferenceScreen
+        android:icon="@drawable/coach"
+        android:key="voice_menu"
+        android:summary="@string/voice_settings_details"
+        android:title="@string/voice_settings_title" >
+        <PreferenceCategory android:title="@string/voice_title" >
+            <PreferenceScreen
+                android:key="general_voice_preferences"
+                android:summary="@string/voice_summary"
+                android:title="@string/voice_title" >
+                <PreferenceCategory android:title="@string/voice_title" >
+                    <CheckBoxPreference
+                        android:defaultValue="false"
+                        android:key="speak"
+                        android:summary="@string/voice_setting_details"
+                        android:title="@string/voice_setting" />
+
+                    <ListPreference
+                        android:defaultValue="@string/disabled"
+                        android:dependency="speak"
+                        android:dialogTitle="@string/speaking_time_interval_setting_title"
+                        android:entries="@array/time_interval_preference"
+                        android:entryValues="@array/time_interval_preference"
+                        android:key="time_interval_selection"
+                        android:summary="@string/speaking_time_interval_setting_details"
+                        android:title="@string/speaking_time_interval_setting" />
+                    <ListPreference
+                        android:defaultValue="1"
+                        android:dependency="speak"
+                        android:dialogTitle="@string/speaking_distance_interval_setting_title"
+                        android:entries="@array/distance_interval_preference"
+                        android:entryValues="@array/distance_interval_preference"
+                        android:key="distance_interval_selection"
+                        android:summary="@string/speaking_distance_interval_setting_details"
+                        android:title="@string/speaking_distance_interval_setting" />
+
+                    <PreferenceScreen
+                        android:dependency="speak"
+                        android:key="tell_what"
+                        android:summary="@string/tell_what_setting_details"
+                        android:title="@string/tell_what" >
+                        <PreferenceCategory android:title="@string/tell_what" >
+                            <CheckBoxPreference
+                                android:defaultValue="true"
+                                android:key="tell_duration"
+                                android:title="@string/time_label" />
+                            <CheckBoxPreference
+                                android:defaultValue="true"
+                                android:key="tell_distance"
+                                android:summary="@string/tell_units_details"
+                                android:title="@string/distance_label" />
+                            <CheckBoxPreference
+                                android:defaultValue="false"
+                                android:key="tell_speed"
+                                android:summary="@string/tell_speed_units_setting_details"
+                                android:title="@string/speed_label" />
+                            <CheckBoxPreference
+                                android:defaultValue="false"
+                                android:key="tell_avg_speed"
+                                android:summary="@string/tell_speed_units_setting_details"
+                                android:title="@string/avg_label_complete" />
+                            <CheckBoxPreference
+                                android:defaultValue="false"
+                                android:key="tell_max_speed"
+                                android:summary="@string/tell_speed_units_setting_details"
+                                android:title="@string/max_speed_label_complete" />
+                            <CheckBoxPreference
+                                android:defaultValue="true"
+                                android:key="tell_ritm"
+                                android:summary="@string/tell_units_details"
+                                android:title="@string/ritm_label_complete" />
+                            <CheckBoxPreference
+                                android:defaultValue="false"
+                                android:key="tell_altitude"
+                                android:summary="@string/tell_altitude_setting_details"
+                                android:title="@string/altitude_label" />
+                            <CheckBoxPreference
+                                android:defaultValue="true"
+                                android:key="tell_calories"
+                                android:summary="@string/tell_calories_setting_details"
+                                android:title="@string/tell_calories_setting" />
+                            <CheckBoxPreference
+                                android:defaultValue="false"
+                                android:key="tell_steps"
+                                android:title="@string/steps_label" />
+                            <CheckBoxPreference
+                                android:defaultValue="false"
+                                android:key="tell_heart_rate"
+                                android:summary="@string/heart_rate_label_complete"
+                                android:title="@string/tell_heart_rate_setting" />
+                            <CheckBoxPreference
+                                android:defaultValue="false"
+                                android:key="tell_cadence"
+                                android:summary="@string/cadence_label_complete"
+                                android:title="@string/tell_cadence_setting" />
+                        </PreferenceCategory>
+                    </PreferenceScreen>
+                </PreferenceCategory>
+            </PreferenceScreen>
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/audio_settings_title" >
+            <PreferenceScreen
+                android:key="hiit_voice_preferences"
+                android:summary="@string/hiit_summary"
+                android:title="@string/hiit" >
+                <PreferenceCategory android:title="@string/audio_settings_title" >
+                    <ListPreference
+                        android:defaultValue="3"
+                        android:dialogTitle="@string/countdown_title"
+                        android:entries="@array/countdown_entries"
+                        android:entryValues="@array/countdown_entries"
+                        android:key="hiit_countdown"
+                        android:summary="@string/hiit_countdown_summary"
+                        android:title="@string/countdown_title" />
+
+                    <CheckBoxPreference
+                        android:defaultValue="true"
+                        android:key="hiit_sound"
+                        android:summary="@string/hiit_sound_summary"
+                        android:title="@string/hiit_sound_title" />
+                    <CheckBoxPreference
+                        android:defaultValue="true"
+                        android:key="hiit_vibrate"
+                        android:summary="@string/hiit_vibrate_summary"
+                        android:title="@string/hiit_vibrate_title" />
+                    <CheckBoxPreference
+                        android:defaultValue="false"
+                        android:key="hiit_countdown_tts"
+                        android:title="@string/hiit_countdown_tts_title" />
+                    <CheckBoxPreference
+                        android:defaultValue="true"
+                        android:key="hiit_current_interval"
+                        android:summary="@string/hiit_current_interval_summary"
+                        android:title="@string/hiit_current_interval_title" />
+                    <CheckBoxPreference
+                        android:defaultValue="true"
+                        android:key="hiit_next_interval"
+                        android:summary="@string/hiit_next_interval_summary"
+                        android:title="@string/hiit_next_interval_title" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/gamepad"
+        android:key="accessories_menu"
+        android:summary="@string/accessories_type_summary"
+        android:title="@string/accessories_type_title" >
+        <PreferenceCategory android:title="Sensor" >
+            <ListPreference
+                android:defaultValue="@string/none"
+                android:entries="@array/sensor_type_all_options"
+                android:entryValues="@array/sensor_type_values"
+                android:key="sensor_type_key"
+                android:title="@string/sensor_type" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="BLUETOOTH" >
+            <Preference
+                android:key="hr_menu"
+                android:summary="@string/bt_summary"
+                android:title="@string/bt_title" />
+
+            <ListPreference
+                android:key="sensor"
+                android:summary=""
+                android:title="@string/bt_sensor" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/settings_sensor_type_ant" >
+            <Preference
+                android:key="@string/settings_sensor_ant_reset_heart_rate_monitor_key"
+                android:persistent="false"
+                android:title="@string/settings_sensor_ant_reset_heart_rate_monitor" />
+            <Preference
+                android:key="@string/settings_sensor_ant_reset_speed_distance_monitor_key"
+                android:persistent="false"
+                android:title="@string/settings_sensor_ant_reset_speed_distance_monitor" />
+            <Preference
+                android:key="@string/settings_sensor_ant_reset_bike_cadence_sensor_key"
+                android:persistent="false"
+                android:title="@string/settings_sensor_ant_reset_bike_cadence_sensor" />
+            <Preference
+                android:key="@string/settings_sensor_ant_reset_combined_bike_sensor_key"
+                android:persistent="false"
+                android:title="@string/settings_sensor_ant_reset_combined_bike_sensor" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <Preference
+        android:icon="@drawable/share"
+        android:key="osm_setup"
+        android:summary="@string/osm_setup_summary"
+        android:title="@string/osm_setup_title" >
+    </Preference>
+    <Preference
+        android:icon="@drawable/save"
+        android:key="export_menu"
+        android:title="@string/backup_title" />
+
+    <PreferenceScreen
+        android:icon="@drawable/about"
+        android:key="about_menu"
+        android:summary="@string/about_details"
+        android:title="@string/about_title" >
+        <intent
+            android:action="android.intent.action.SETTINGS_ABOUT"
+            android:targetClass="com.saulcintero.moveon.Settings_About"
+            android:targetPackage="com.saulcintero.moveon" />
+    </PreferenceScreen>
+
+</PreferenceScreen>

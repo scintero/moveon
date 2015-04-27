@@ -83,7 +83,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
             android:textSize="@dimen/text_size_medium" />
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -93,8 +93,10 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
             android:id="@+id/checkBox1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/import_task_delete_file" />
-    </LinearLayout>
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/import_task_delete_file"
+            android:textSize="@dimen/text_size_micro" />
+    </RelativeLayout>
 
 </LinearLayout>

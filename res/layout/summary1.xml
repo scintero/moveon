@@ -211,7 +211,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_one"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/time_small" />
 
                         <TextView
@@ -253,7 +253,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_two"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/distance_small" />
 
                         <TextView
@@ -295,7 +295,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_three"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/avg_speed_small" />
 
                         <TextView
@@ -337,7 +337,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_four"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/ritm_small" />
 
                         <TextView
@@ -379,7 +379,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_five"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/max_speed_small" />
 
                         <TextView
@@ -421,7 +421,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_six"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/altitude_small" />
 
                         <TextView
@@ -463,7 +463,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_seven"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/altitude_small" />
 
                         <TextView
@@ -505,7 +505,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_fourteen"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/up_distance_small" />
 
                         <TextView
@@ -547,7 +547,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_fifteen"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/down_distance_small" />
 
                         <TextView
@@ -589,7 +589,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_eight"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/calories_small" />
 
                         <TextView
@@ -631,7 +631,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_nine"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/steps_small" />
 
                         <TextView
@@ -673,7 +673,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_ten"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/heart_small" />
 
                         <TextView
@@ -715,7 +715,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_eleven"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/heart_small" />
 
                         <TextView
@@ -757,7 +757,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_sixteen"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/cadence_small" />
 
                         <TextView
@@ -799,7 +799,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_seventeen"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/cadence_small" />
 
                         <TextView
@@ -841,7 +841,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         <ImageView
                             android:id="@+id/summary_image_twelve"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
                             android:src="@drawable/shoe_small" />
 
                         <TextView
@@ -893,7 +893,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                                 <ImageView
                                     android:id="@+id/summary_image_thirteen"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="fill_parent"
                                     android:src="@drawable/notes_small" />
 
                                 <TextView

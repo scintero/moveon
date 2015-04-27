@@ -63,7 +63,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:id="@+id/birthday_date"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp" />
+                        android:layout_marginLeft="5dp"
+                        android:textSize="@dimen/text_size_medium" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -87,7 +88,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textSize="@dimen/text_size_medium" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -107,7 +109,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:id="@+id/calculate"
                         style="@style/Button"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="45dp"
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/button_gradient_rounded_corner_states"
                         android:text="@string/calculate"
@@ -144,7 +146,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textSize="@dimen/text_size_medium" />
                 </LinearLayout>
 
                 <LinearLayout

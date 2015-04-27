@@ -125,7 +125,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:layout_weight="0.77"
                         android:ems="10"
                         android:inputType="number"
-                        android:text="@string/two_zeros_value" />
+                        android:text="@string/two_zeros_value"
+                        android:textSize="@dimen/text_size_medium" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -145,7 +146,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:layout_weight="0.77"
                         android:ems="10"
                         android:inputType="number"
-                        android:text="@string/two_zeros_value" />
+                        android:text="@string/two_zeros_value"
+                        android:textSize="@dimen/text_size_medium" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -205,7 +207,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:layout_weight="0.77"
                         android:ems="10"
                         android:inputType="number"
-                        android:text="@string/two_zeros_value" />
+                        android:text="@string/two_zeros_value"
+                        android:textSize="@dimen/text_size_medium" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -225,7 +228,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:layout_weight="0.77"
                         android:ems="10"
                         android:inputType="number"
-                        android:text="@string/two_zeros_value" />
+                        android:text="@string/two_zeros_value"
+                        android:textSize="@dimen/text_size_medium" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -285,7 +289,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:layout_weight="0.25"
                         android:ems="10"
                         android:inputType="number"
-                        android:text="@string/one_value" />
+                        android:text="@string/one_value"
+                        android:textSize="@dimen/text_size_medium" />
                 </LinearLayout>
 
                 <ImageView

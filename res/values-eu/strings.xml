@@ -25,6 +25,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Keys for persisted preferences. Don't translate this. -->
     <string name="bluetooth_sensor_key">bluetoothSensor</string>
+    <string name="bluetooth_smart_sensor_key">bluetoothSmartSensor</string>
     <string name="sensor_type_key">sensorType</string>
 
     <!-- Sensor Types. Don't translate this. -->
@@ -32,7 +33,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
     <string name="polar_sensor_type">POLAR</string>
     <string name="zephyr_sensor_type">ZEPHYR</string>
     <string name="ant_sensor_type">ANT</string>
-    <string name="btle_sensor_type">BLUETOOTH LE</string>
+    <string name="btle_sensor_type">BLUETOOTH SMART</string>
 
     <!-- Sensor states -->
     <string name="sensor_data_time">Sentsorearen datuen ordua</string>
@@ -63,7 +64,7 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
       	choose a Polar bluetooth sensor.">Polar Bluetooth</string>
     <string name="settings_sensor_type_zephyr" translation_description="In the 'Sensor' settings, the option in the 'Sensor type' picker to
       	choose a Zephyr bluetooth sensor.">Zephyr Bluetooth (esperimentala)</string>
-    <string name="settings_sensor_type_btle">Smart Bluetooth -LE- (esperimentala)</string>
+    <string name="settings_sensor_type_btle">Bluetooth Smart</string>
     <string name="settings_sensor_type_ant" translation_description="In the 'Sensor' settings, the option in the 'Sensor type' picker to
       	choose an ANT+ sensor. Note that ANT+ is a radio standard.">ANT+</string>
     <string name="settings_sensor_ant_reset_heart_rate_monitor" translation_description="In the 'Sensor' settings, under the 'ANT+' section, the option to reset
@@ -315,6 +316,13 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
     <string name="ok">Onartu</string>
     <string name="save">Gorde</string>
     <string name="cancel">Kantzelatu</string>
+    
+    <!-- 'btle_scan' form -->
+    <string name="btle_scan_title">Gordetako dispositiboak:</string>
+    <string name="btle_scan_description">Hautatu zerrendatik eraibili nahi duzun dispositiboa</string>
+    <string name="scan">Bilatu</string>
+    <string name="error_bluetooth_not_supported">Bluetooth ez da onartzen</string>
+    <string name="unknown_device">Dispositibo ezezaguna</string>
 
     <!-- Information details -->
     <string name="time_label">Iraupena</string>
@@ -495,9 +503,13 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
     <string name="hiit_vibrate_summary">Alertetan bibratu</string>
     <string name="accessories_type_title">Osagarriak</string>
     <string name="accessories_type_summary">Bluetooth edo ANT+ sentsoreak</string>
-    <string name="bt_title">Bluetooth sinkronizatzea</string>
+    <string name="bt_category_title">BLUETOOTH KLASIKOA</string>
+    <string name="bt_title">Bluetooth klasikoa sinkronizatzea</string>
     <string name="bt_summary">Bluetoothen doiketak irekitzeko aukera ematen du sentsore bat sinkronizatzeko</string>
     <string name="bt_sensor">Bluetooth sentsorea</string>
+    <string name="btle_category_title">BLUETOOTH SMART</string>
+    <string name="btle_title">Bluetooth Smart sinkronizatzea</string>
+    <string name="btle_summary">Hautatu listatik zure Bluetooth Smart sentsorea</string>
     <string name="osm_setup_title">Konektatu eta argitaratu</string>
     <string name="osm_setup_summary">GPS ibilbideak igotzeko baimena, etiketak, deskribapena eta ikusgaitasuna ezartzen ditu</string>
     <string name="osm_lbl_authorize">Baimendu app hau</string>

@@ -124,7 +124,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                                     android:id="@+id/date"
                                     android:layout_width="fill_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignParentLeft="true" />
+                                    android:layout_alignParentLeft="true"
+                                    android:textSize="@dimen/text_size_medium" />
                             </RelativeLayout>
 
                             <RelativeLayout
@@ -136,7 +137,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                                     android:id="@+id/time"
                                     android:layout_width="fill_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignParentLeft="true" />
+                                    android:layout_alignParentLeft="true"
+                                    android:textSize="@dimen/text_size_medium" />
                             </RelativeLayout>
                         </LinearLayout>
 

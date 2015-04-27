@@ -288,9 +288,9 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                 android:key="sensor_type_key"
                 android:title="@string/sensor_type" />
         </PreferenceCategory>
-        <PreferenceCategory android:title="BLUETOOTH" >
+        <PreferenceCategory android:title="BLUETOOTH CLASSIC" >
             <Preference
-                android:key="hr_menu"
+                android:key="hr_menu1"
                 android:summary="@string/bt_summary"
                 android:title="@string/bt_title" />
 
@@ -298,6 +298,17 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                 android:key="sensor"
                 android:summary=""
                 android:title="@string/bt_sensor" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="BLUETOOTH SMART" >
+            <PreferenceScreen
+                android:key="hr_menu2"
+                android:summary="@string/btle_summary"
+                android:title="@string/btle_title" >
+                <intent
+                    android:action="android.intent.action.BTLESCAN"
+                    android:targetClass="com.saulcintero.moveon.BtleScan"
+                    android:targetPackage="com.saulcintero.moveon" />
+            </PreferenceScreen>
         </PreferenceCategory>
         <PreferenceCategory android:title="@string/settings_sensor_type_ant" >
             <Preference

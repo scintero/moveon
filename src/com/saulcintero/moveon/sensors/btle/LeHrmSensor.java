@@ -19,8 +19,6 @@ import java.util.UUID;
 import android.annotation.TargetApi;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
 
@@ -33,8 +31,8 @@ import com.saulcintero.moveon.sensors.Sensor.SensorState;
  * such as a heart rate monitor.
  * 
  * @see <a href=
- *      'https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_measu
- *      r e m e n t . x m l ' > HRM Characteristic specification at
+ *      'https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_me
+ *      a s u r e m e n t . x m l ' > HRM Characteristic specification at
  *      bluetooth.org</a>
  */
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
@@ -46,7 +44,7 @@ public class LeHrmSensor extends BluetoothLeSensor {
 	// Bitmask to figure out whether heart rates are UINT8 or UINT16.
 	private static final int HR_FMT_BITMASK = 0x01;
 
-	private Context mContext;
+	int hr = 0;
 
 	public static final LeHrmSensor INSTANCE = new LeHrmSensor();
 
@@ -63,6 +61,10 @@ public class LeHrmSensor extends BluetoothLeSensor {
 		return HRM_CHARACTERISTIC;
 	}
 
+	public int hr() {
+		return hr;
+	}
+
 	/**
 	 * Read populates a {@link SensorDataSet} with content read from the
 	 * Bluetooth HRM server. Bluetooth Smart HRM servers are required to support
@@ -77,7 +79,7 @@ public class LeHrmSensor extends BluetoothLeSensor {
 				: BluetoothGattCharacteristic.FORMAT_UINT16);
 
 		// Heart rate (unit BPM) is at offset 1.
-		Integer hr = ch.getIntValue(format, 1);
+		hr = ch.getIntValue(format, 1);
 
 		// TODO(dgupta): read RR intervals once we can log them.
 
@@ -93,10 +95,6 @@ public class LeHrmSensor extends BluetoothLeSensor {
 		SensorData.Builder datum = SensorData.newBuilder().setState(SensorState.SENDING).setValue(hr);
 		SensorDataSet dataset = SensorDataSet.newBuilder().setCreationTime(System.currentTimeMillis())
 				.setHeartRate(datum).build();
-
-		Intent i = new Intent("android.intent.action.BEAT_COUNTER");
-		i.putExtra("beats", String.valueOf(hr));
-		mContext.sendBroadcast(i);
 
 		return dataset;
 	}

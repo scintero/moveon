@@ -688,64 +688,122 @@ public class History extends Fragment implements IActionListener {
 			cursor = DBManager.getAll_DESC("routes");
 			break;
 		case BY_ACTIVITY:
-			cursor = DBManager.CustomQuery(getString(R.string.db_query_select_records_by_activity),
-					"SELECT * FROM routes WHERE category_id = '" + activities_id + "' ORDER BY _id DESC");
+			cursor = DBManager
+					.CustomQuery(
+							getString(R.string.db_query_select_records_by_activity),
+							"SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date FROM routes WHERE category_id = '"
+									+ activities_id + "' ORDER BY iso_date DESC");
 			break;
 		case BY_DATE_THIS_YEAR:
-			cursor = DBManager.CustomQuery(
-					getString(R.string.db_query_select_records_by_date),
-					"SELECT * FROM routes WHERE substr(date,7) = '"
-							+ Calendar.getInstance().get(Calendar.YEAR) + "' ORDER BY _id DESC");
+			cursor = DBManager
+					.CustomQuery(
+							getString(R.string.db_query_select_records_by_date),
+							"SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date FROM routes WHERE substr(date,7) = '"
+									+ Calendar.getInstance().get(Calendar.YEAR) + "' ORDER BY iso_date DESC");
 			break;
 		case BY_DATE_THIS_MONTH:
 			getMonth();
-			cursor = DBManager.CustomQuery(getString(R.string.db_query_select_records_by_date),
-					"SELECT * FROM routes WHERE substr(date,4,2) = '" + mMonth1 + "' "
-							+ "AND substr(date,7) = '" + Calendar.getInstance().get(Calendar.YEAR)
-							+ "' ORDER BY _id DESC");
+			cursor = DBManager
+					.CustomQuery(
+							getString(R.string.db_query_select_records_by_date),
+							"SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date FROM routes WHERE substr(date,4,2) = '"
+									+ mMonth1
+									+ "' "
+									+ "AND substr(date,7) = '"
+									+ Calendar.getInstance().get(Calendar.YEAR) + "' ORDER BY iso_date DESC");
 			break;
 		case BY_DATE_THIS_WEEK:
 			getWeek();
-			cursor = DBManager.CustomQuery(getString(R.string.db_query_select_records_by_date),
-					"SELECT * FROM routes WHERE substr(date,7)||substr(date,4,2)||substr(date,1,2) "
-							+ "BETWEEN '" + mYear1 + mMonth1 + mDay1 + "' AND '" + mYear2 + mMonth2 + mDay2
-							+ "' ORDER BY _id DESC");
+			cursor = DBManager
+					.CustomQuery(
+							getString(R.string.db_query_select_records_by_date),
+							"SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date FROM routes WHERE substr(date,7)||substr(date,4,2)||substr(date,1,2) "
+									+ "BETWEEN '"
+									+ mYear1
+									+ mMonth1
+									+ mDay1
+									+ "' AND '"
+									+ mYear2
+									+ mMonth2
+									+ mDay2 + "' ORDER BY iso_date DESC");
 			break;
 		case BY_DATE_CUSTOM_DATE:
 			extractPartsOfDate();
-			cursor = DBManager.CustomQuery(getString(R.string.db_query_select_records_by_date),
-					"SELECT * FROM routes WHERE substr(date,7)||substr(date,4,2)||substr(date,1,2) "
-							+ "BETWEEN '" + mYear1 + mMonth1 + mDay1 + "' AND '" + mYear2 + mMonth2 + mDay2
-							+ "' " + "ORDER BY _id DESC");
+			cursor = DBManager
+					.CustomQuery(
+							getString(R.string.db_query_select_records_by_date),
+							"SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date FROM routes WHERE substr(date,7)||substr(date,4,2)||substr(date,1,2) "
+									+ "BETWEEN '"
+									+ mYear1
+									+ mMonth1
+									+ mDay1
+									+ "' AND '"
+									+ mYear2
+									+ mMonth2
+									+ mDay2 + "' " + "ORDER BY iso_date DESC");
 			break;
 		case BY_ACTIVITY_AND_DATE_THIS_YEAR:
-			cursor = DBManager.CustomQuery(getString(R.string.db_query_select_records_by_activity_and_date),
-					"SELECT * FROM routes WHERE category_id = '" + activities_id + "' "
-							+ "AND substr(date,7) = '" + Calendar.getInstance().get(Calendar.YEAR)
-							+ "' ORDER BY _id DESC");
+			cursor = DBManager
+					.CustomQuery(
+							getString(R.string.db_query_select_records_by_activity_and_date),
+							"SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date FROM routes WHERE category_id = '"
+									+ activities_id
+									+ "' "
+									+ "AND substr(date,7) = '"
+									+ Calendar.getInstance().get(Calendar.YEAR) + "' ORDER BY iso_date DESC");
 			break;
 		case BY_ACTIVITY_AND_DATE_THIS_MONTH:
 			getMonth();
-			cursor = DBManager.CustomQuery(getString(R.string.db_query_select_records_by_activity_and_date),
-					"SELECT * FROM routes WHERE category_id = '" + activities_id + "' "
-							+ "AND substr(date,4,2) = '" + mMonth1 + "' " + "AND substr(date,7) = '"
-							+ Calendar.getInstance().get(Calendar.YEAR) + "' ORDER BY _id DESC");
+			cursor = DBManager
+					.CustomQuery(
+							getString(R.string.db_query_select_records_by_activity_and_date),
+							"SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date FROM routes WHERE category_id = '"
+									+ activities_id
+									+ "' "
+									+ "AND substr(date,4,2) = '"
+									+ mMonth1
+									+ "' "
+									+ "AND substr(date,7) = '"
+									+ Calendar.getInstance().get(Calendar.YEAR)
+									+ "' ORDER BY iso_date DESC");
 			break;
 		case BY_ACTIVITY_AND_DATE_THIS_WEEK:
 			getWeek();
-			cursor = DBManager.CustomQuery(getString(R.string.db_query_select_records_by_activity_and_date),
-					"SELECT * FROM routes WHERE category_id = '" + activities_id + "' "
-							+ "AND substr(date,7)||substr(date,4,2)||substr(date,1,2) " + "BETWEEN '"
-							+ mYear1 + mMonth1 + mDay1 + "' AND '" + mYear2 + mMonth2 + mDay2
-							+ "' ORDER BY _id DESC");
+			cursor = DBManager
+					.CustomQuery(
+							getString(R.string.db_query_select_records_by_activity_and_date),
+							"SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date FROM routes WHERE category_id = '"
+									+ activities_id
+									+ "' "
+									+ "AND substr(date,7)||substr(date,4,2)||substr(date,1,2) "
+									+ "BETWEEN '"
+									+ mYear1
+									+ mMonth1
+									+ mDay1
+									+ "' AND '"
+									+ mYear2
+									+ mMonth2
+									+ mDay2
+									+ "' ORDER BY iso_date DESC");
 			break;
 		case BY_ACTIVITY_AND_DATE_CUSTOM_DATE:
 			extractPartsOfDate();
-			cursor = DBManager.CustomQuery(getString(R.string.db_query_select_records_by_activity_and_date),
-					"SELECT * FROM routes WHERE category_id = '" + activities_id + "' "
-							+ "AND substr(date,7)||substr(date,4,2)||substr(date,1,2) " + "BETWEEN '"
-							+ mYear1 + mMonth1 + mDay1 + "' AND '" + mYear2 + mMonth2 + mDay2
-							+ "' ORDER BY _id DESC");
+			cursor = DBManager
+					.CustomQuery(
+							getString(R.string.db_query_select_records_by_activity_and_date),
+							"SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date FROM routes WHERE category_id = '"
+									+ activities_id
+									+ "' "
+									+ "AND substr(date,7)||substr(date,4,2)||substr(date,1,2) "
+									+ "BETWEEN '"
+									+ mYear1
+									+ mMonth1
+									+ mDay1
+									+ "' AND '"
+									+ mYear2
+									+ mMonth2
+									+ mDay2
+									+ "' ORDER BY iso_date DESC");
 			break;
 		}
 		cursor.moveToFirst();

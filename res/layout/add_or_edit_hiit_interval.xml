@@ -125,7 +125,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                             android:lines="1"
                             android:maxLines="1"
                             android:minLines="1"
-                            android:text="@string/zero_value" />
+                            android:text="@string/zero_value"
+                            android:textSize="@dimen/text_size_large" />
 
                         <Button
                             android:id="@+id/minutes_downButton"
@@ -188,7 +189,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                             android:lines="1"
                             android:maxLines="1"
                             android:minLines="1"
-                            android:text="@string/zero_value" />
+                            android:text="@string/zero_value"
+                            android:textSize="@dimen/text_size_large" />
 
                         <Button
                             android:id="@+id/seconds_downButton"

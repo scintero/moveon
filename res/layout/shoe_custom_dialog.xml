@@ -34,7 +34,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight=".3"
-            android:text="@string/brand_and_model" />
+            android:text="@string/brand_and_model"
+            android:textSize="@dimen/text_size_medium" />
 
         <EditText
             android:id="@+id/shoe_brand_and_model"
@@ -43,7 +44,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
             android:layout_weight=".7"
             android:hint=""
             android:imeOptions="actionDone"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_medium" />
     </LinearLayout>
 
     <LinearLayout
@@ -56,7 +58,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight=".3"
-            android:text="@string/start_distance" />
+            android:text="@string/start_distance"
+            android:textSize="@dimen/text_size_medium" />
 
         <EditText
             android:id="@+id/shoe_distance"
@@ -65,7 +68,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
             android:layout_weight=".7"
             android:imeOptions="actionDone"
             android:inputType="numberDecimal"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_medium" />
     </LinearLayout>
 
     <RelativeLayout
@@ -80,7 +84,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="@string/default_shoe" />
+            android:text="@string/default_shoe"
+            android:textSize="@dimen/text_size_micro" />
     </RelativeLayout>
 
 </LinearLayout>

@@ -59,8 +59,8 @@ public class MoveOnPreferences extends PreferenceActivity {
 
 	private ListPreference operationLevel, sensorType, sensor, sensitivityLevel, mListPrefTemp;
 
-	private Preference hrMenu, antHr, antSpeedDistance, antBikeCadence, antCombinedBike, autoPause, osmSetup,
-			exportMenu;
+	private Preference hrMenu1, hrMenu2, antHr, antSpeedDistance, antBikeCadence, antCombinedBike, autoPause,
+			osmSetup, exportMenu;
 
 	private CheckBoxPreference speakCheckBox;
 
@@ -138,7 +138,8 @@ public class MoveOnPreferences extends PreferenceActivity {
 		sensorType = (ListPreference) findPreference("sensor_type_key");
 		sensor = (ListPreference) findPreference("sensor");
 		sensitivityLevel = (ListPreference) findPreference("sensitivity_level");
-		hrMenu = (Preference) findPreference("hr_menu");
+		hrMenu1 = (Preference) findPreference("hr_menu1");
+		hrMenu2 = (Preference) findPreference("hr_menu2");
 		antHr = (Preference) findPreference("settingsSensorAntResetHeartRateMonitor");
 		antSpeedDistance = (Preference) findPreference("settingsSensorAntResetSpeedDistanceMonitor");
 		antBikeCadence = (Preference) findPreference("settingsSensorAntResetBikeCadenceSensor");
@@ -239,8 +240,6 @@ public class MoveOnPreferences extends PreferenceActivity {
 						sensorType.setValue(getString(R.string.zephyr_sensor_type));
 					} else if (newValue.toString().equals(getString(R.string.btle_sensor_type))) { // bluetooth
 																									// smart
-																									// (low
-																									// energy)
 						if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
 							sensorType.setValue(getString(R.string.btle_sensor_type));
 						} else {
@@ -278,11 +277,20 @@ public class MoveOnPreferences extends PreferenceActivity {
 			}
 		});
 
-		hrMenu.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+		hrMenu1.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 				Intent settingsIntent = new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);
 				startActivity(settingsIntent);
+
+				return true;
+			}
+		});
+
+		hrMenu2.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				startActivity(new Intent(act, BtleDevices.class));
 
 				return true;
 			}
@@ -351,7 +359,7 @@ public class MoveOnPreferences extends PreferenceActivity {
 				if (TextToSpeechUtils.getIfHasErrors()) {
 					UIFunctionUtils.showMessage(getBaseContext(), false,
 							getBaseContext().getString(R.string.tts_language_is_not_available));
-					
+
 					speakCheckBox.setChecked(false);
 
 					return false;
@@ -379,35 +387,45 @@ public class MoveOnPreferences extends PreferenceActivity {
 	}
 
 	private void checkSensorOptionsStatus() {
-		boolean isBluetooth = (PreferenceManager.getDefaultSharedPreferences(this).getString(
+		boolean isBluetoothClassic = (PreferenceManager.getDefaultSharedPreferences(this).getString(
 				"sensor_type_key", getString(R.string.none)).equals(getString(R.string.polar_sensor_type)))
-				|| (PreferenceManager.getDefaultSharedPreferences(this)
-						.getString("sensor_type_key", getString(R.string.none))
-						.equals(getString(R.string.zephyr_sensor_type)) || PreferenceManager
-						.getDefaultSharedPreferences(this)
-						.getString("sensor_type_key", getString(R.string.none))
-						.equals(getString(R.string.btle_sensor_type)));
+				|| (PreferenceManager.getDefaultSharedPreferences(this).getString("sensor_type_key",
+						getString(R.string.none)).equals(getString(R.string.zephyr_sensor_type)));
+
+		boolean isBluetoothSmart = (PreferenceManager.getDefaultSharedPreferences(this).getString(
+				"sensor_type_key", getString(R.string.none)).equals(getString(R.string.btle_sensor_type)));
 
 		boolean isAnt = (PreferenceManager.getDefaultSharedPreferences(this).getString("sensor_type_key",
 				getString(R.string.none)).equals(getString(R.string.ant_sensor_type)));
 
-		if (isBluetooth) {
+		if (isBluetoothClassic) {
 			sensor.setEnabled(true);
-			hrMenu.setEnabled(true);
+			hrMenu1.setEnabled(true);
+			hrMenu2.setEnabled(false);
+			antHr.setEnabled(false);
+			antSpeedDistance.setEnabled(false);
+			antBikeCadence.setEnabled(false);
+			antCombinedBike.setEnabled(false);
+		} else if (isBluetoothSmart) {
+			sensor.setEnabled(false);
+			hrMenu1.setEnabled(false);
+			hrMenu2.setEnabled(true);
 			antHr.setEnabled(false);
 			antSpeedDistance.setEnabled(false);
 			antBikeCadence.setEnabled(false);
 			antCombinedBike.setEnabled(false);
 		} else if (isAnt) {
 			sensor.setEnabled(false);
-			hrMenu.setEnabled(false);
+			hrMenu1.setEnabled(false);
+			hrMenu2.setEnabled(false);
 			antHr.setEnabled(true);
 			antSpeedDistance.setEnabled(true);
 			antBikeCadence.setEnabled(true);
 			antCombinedBike.setEnabled(true);
 		} else {
 			sensor.setEnabled(false);
-			hrMenu.setEnabled(false);
+			hrMenu1.setEnabled(false);
+			hrMenu2.setEnabled(false);
 			antHr.setEnabled(false);
 			antSpeedDistance.setEnabled(false);
 			antBikeCadence.setEnabled(false);

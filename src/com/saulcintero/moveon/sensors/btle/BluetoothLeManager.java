@@ -28,6 +28,8 @@ import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.util.Log;
 
@@ -98,6 +100,10 @@ public class BluetoothLeManager extends SensorManager {
 			switch (newState) {
 			case BluetoothProfile.STATE_DISCONNECTED:
 				Log.i(TAG, "Disconnected: removing Gatt device " + device.getName());
+
+				Intent i = new Intent("android.intent.action.BEAT_COUNTER");
+				i.putExtra("beats", String.valueOf(mContext.getString(R.string.zero_value)));
+				mContext.sendBroadcast(i);
 
 				// This shouldn't be needed.
 				gatt.disconnect();
@@ -176,6 +182,10 @@ public class BluetoothLeManager extends SensorManager {
 				setSensorState(SensorState.SENDING);
 			}
 
+			Intent i = new Intent("android.intent.action.BEAT_COUNTER");
+			i.putExtra("beats", String.valueOf(LeHrmSensor.INSTANCE.hr));
+			mContext.sendBroadcast(i);
+
 			synchronized (SYNC) {
 				dataset = ds;
 			}
@@ -191,9 +201,11 @@ public class BluetoothLeManager extends SensorManager {
 			Log.i(TAG, "Already connected to a GATT device; skipping.");
 			return;
 		}
-		String address = Constants.getString(mContext, R.string.bluetooth_sensor_key,
+		SharedPreferences prefs = mContext.getSharedPreferences(Constants.SETTINGS_NAME, 0);
+		String address = prefs.getString(mContext.getString(R.string.bluetooth_smart_sensor_key),
 				Constants.BLUETOOTH_SENSOR_DEFAULT);
-		if (address == null || address.trim().equals("")) {
+		if (address == null || address.trim().equals("")
+				|| Constants.BLUETOOTH_SENSOR_DEFAULT.equals(address)) {
 			Log.e(TAG, "Default bluetooth sensor not set; can't connect");
 			setSensorState(SensorState.NONE);
 			return;

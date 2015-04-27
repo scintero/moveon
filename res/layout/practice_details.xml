@@ -73,7 +73,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:layout_below="@+id/practice_name_label"
                         android:layout_marginTop="15dp"
                         android:ems="10"
-                        android:hint="" >
+                        android:hint=""
+                        android:textSize="@dimen/text_size_medium" >
 
                         <requestFocus />
                     </EditText>
@@ -150,7 +151,8 @@ along with MoveOn Sports Tracker. If not, see <http://www.gnu.org/licenses/>.
                         android:layout_below="@+id/notes_label"
                         android:layout_marginTop="15dp"
                         android:ems="10"
-                        android:hint="@string/comments_hint_label" >
+                        android:hint="@string/comments_hint_label"
+                        android:textSize="@dimen/text_size_medium" >
                     </EditText>
                 </RelativeLayout>
             </LinearLayout>

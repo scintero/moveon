@@ -154,7 +154,8 @@ public class DataManager {
 	}
 
 	public Cursor getAll_DESC(String DATA_MANAGER_TABLENAME) {
-		String DATA_MANAGER_GETALL = "SELECT * FROM " + DATA_MANAGER_TABLENAME + " ORDER BY _id DESC";
+		String DATA_MANAGER_GETALL = "SELECT *, ((substr(date,7,4)||substr(date,4,2)||substr(date,1,2))) AS iso_date"
+				+ " FROM " + DATA_MANAGER_TABLENAME + " ORDER BY iso_date DESC";
 		Log.i(TAG, DATA_MANAGER_GETALL);
 
 		return db.rawQuery(DATA_MANAGER_GETALL, null);

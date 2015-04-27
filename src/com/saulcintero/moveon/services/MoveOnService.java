@@ -536,7 +536,7 @@ public class MoveOnService extends Service {
 				.setContentText(getString(R.string.local_service_started)).setOngoing(true);
 
 		Intent notificationIntent = new Intent(mContext, SplashScreen.class);
-		notificationIntent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+		notificationIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 		notificationIntent.setAction(Intent.ACTION_MAIN);
 		notificationIntent.addCategory(Intent.CATEGORY_LAUNCHER);
 
@@ -805,22 +805,27 @@ public class MoveOnService extends Service {
 				checkANT = true;
 
 			if ((bluetoothAdapter != null) && (bluetoothAdapter.isEnabled())) {
-				List<String> optionsList = new ArrayList<String>();
-				List<String> valuesList = new ArrayList<String>();
-
-				BluetoothDeviceUtils.populateDeviceLists(bluetoothAdapter, optionsList, valuesList);
-
-				String value = Constants.getString(this, R.string.bluetooth_sensor_key,
-						Constants.BLUETOOTH_SENSOR_DEFAULT);
-
-				if (valuesList.contains(value))
-					value = Constants.getString(this, R.string.bluetooth_sensor_key,
-							Constants.BLUETOOTH_SENSOR_DEFAULT);
-				else
-					value = Constants.BLUETOOTH_SENSOR_DEFAULT;
-
-				if (value.length() > 0)
+				if ((prefs.getString("sensor_type_key", mContext.getString(R.string.none))).equals(mContext
+						.getString(R.string.btle_sensor_type))) {
 					checkBT = true;
+				} else {
+					List<String> optionsList = new ArrayList<String>();
+					List<String> valuesList = new ArrayList<String>();
+
+					BluetoothDeviceUtils.populateDeviceLists(bluetoothAdapter, optionsList, valuesList);
+
+					String value = Constants.getString(this, R.string.bluetooth_sensor_key,
+							Constants.BLUETOOTH_SENSOR_DEFAULT);
+
+					if (valuesList.contains(value))
+						value = Constants.getString(this, R.string.bluetooth_sensor_key,
+								Constants.BLUETOOTH_SENSOR_DEFAULT);
+					else
+						value = Constants.BLUETOOTH_SENSOR_DEFAULT;
+
+					if (value.length() > 0)
+						checkBT = true;
+				}
 			}
 
 			if (checkANT || checkBT)

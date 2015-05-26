@@ -21,10 +21,12 @@ package com.saulcintero.moveon;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -53,7 +55,7 @@ public class BtleDevices extends Activity {
 
 	private static final int REQUEST_ENABLE_BT = 1;
 	private static final long SCAN_PERIOD = 10000;
-
+	
 	@SuppressLint("InlinedApi")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -101,14 +103,41 @@ public class BtleDevices extends Activity {
 		list.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				TextView textViewItem = ((TextView) view.findViewById(R.id.device_address));
-				String address = textViewItem.getText().toString();
+				TextView deviceNameText = ((TextView) view.findViewById(R.id.device_name));
+				TextView deviceAddressText = ((TextView) view.findViewById(R.id.device_address));
+				String address = deviceAddressText.getText().toString();
+
 				if (address.length() > 0)
-					Constants
-							.setString(getApplicationContext(), R.string.bluetooth_smart_sensor_key, address);
-				finish();
+					showSaveSensorAddressDialog(deviceNameText.getText().toString(), address);
 			}
 		});
+	}
+
+	private void showSaveSensorAddressDialog(String name, final String address) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle(getString(R.string.select_action));
+		builder.setMessage(name);
+		builder.setCancelable(true);
+		builder.setPositiveButton(getString(R.string.alertdialog_option_6),
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						if (mScanning)
+							mBluetoothAdapter.stopLeScan(mLeScanCallback);
+
+						Constants.setString(getApplicationContext(), R.string.bluetooth_smart_sensor_key,
+								address);
+
+						finish();
+					}
+				});
+		builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+				dialog.cancel();
+			}
+		});
+
+		AlertDialog alert11 = builder.create();
+		alert11.show();
 	}
 
 	@Override

@@ -536,7 +536,8 @@ public class MoveOnService extends Service {
 				.setContentText(getString(R.string.local_service_started)).setOngoing(true);
 
 		Intent notificationIntent = new Intent(mContext, SplashScreen.class);
-		notificationIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+		notificationIntent
+				.setFlags(Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED | Intent.FLAG_ACTIVITY_NEW_TASK);
 		notificationIntent.setAction(Intent.ACTION_MAIN);
 		notificationIntent.addCategory(Intent.CATEGORY_LAUNCHER);
 

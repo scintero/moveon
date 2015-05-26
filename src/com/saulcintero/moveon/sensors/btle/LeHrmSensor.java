@@ -31,8 +31,8 @@ import com.saulcintero.moveon.sensors.Sensor.SensorState;
  * such as a heart rate monitor.
  * 
  * @see <a href=
- *      'https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_me
- *      a s u r e m e n t . x m l ' > HRM Characteristic specification at
+ *      'https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_m
+ *      e a s u r e m e n t . x m l ' > HRM Characteristic specification at
  *      bluetooth.org</a>
  */
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
